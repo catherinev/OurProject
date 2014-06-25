@@ -1,6 +1,9 @@
 
 class UsersController < ApplicationController
-	
+	def new
+		@user = User.new
+	end
+
 	def create
 		@user = User.new(user_params)
 		if @user.save
@@ -14,7 +17,10 @@ class UsersController < ApplicationController
 
 	def edit
 		if current_user == User.find(params[:id])
-			# add guts
+			@user = current_user
+			render 'edit'
+		else
+			not_found
 		end
 
 	end
@@ -28,7 +34,13 @@ class UsersController < ApplicationController
 	end
 
 	def update
-	
+		if current_user == User.find(params[:id])
+			# look at the check for current user security shit
+			current_user.update(user_params)
+			redirect_to user_path(current_user)
+		else
+			not_found
+		end	
 	end
 
 	private
