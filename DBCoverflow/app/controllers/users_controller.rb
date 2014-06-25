@@ -13,11 +13,18 @@ class UsersController < ApplicationController
 	end
 
 	def edit
+		if current_user == User.find(params[:id])
+			# add guts
+		end
 
 	end
 
 	def show
-	
+		if current_user == User.find(params[:id])
+			render user_path(current_user)
+		else
+			# we are about to build 404 redirect
+		end
 	end
 
 	def update
