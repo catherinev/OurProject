@@ -19,6 +19,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    @categories = Category.all
   end
 
   def edit
