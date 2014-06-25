@@ -1,6 +1,8 @@
 <h1><%=@question.title%></h1>
 <p><%=@question.content%></p>
-
+<% if @question.user_id == current_user.id %>
+  <%= link_to "Edit", edit_question_path(@question)%>
+<%end%>
 <% @comments.each do|comment| %>
   <%=comment.content%> <strong><%=comment.user.username%></strong>
   <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%>
@@ -19,3 +21,8 @@
   </ul>
 <%end%>
 </ul>
+
+
+<% if flash[:notice]%>
+  <div class="notice"><%=flash[:notice]%></div>
+<%end%>
