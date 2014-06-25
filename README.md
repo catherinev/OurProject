@@ -3,7 +3,7 @@ DBCoverflow
 ## Pickles approved git process
 1. git checkout {your_new_branch_name}
 2. git pull origin master (will try to merge)
-⋅⋅*fix merge conflicts (if necessary)
+⋅⋅* fix merge conflicts (if necessary)
 3. add/commit 
 4. git push origin {your_branch}
 5. pull request
