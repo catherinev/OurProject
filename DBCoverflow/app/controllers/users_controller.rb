@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 			redirect_to questions_path
 		else
 			@error = "Invalid shit.  Try again."
-			render new_user_path
+			render 'new'
 		end
 	end
 
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
 	def show
 		if current_user == User.find(params[:id])
-			render user_path(current_user)
+			render 'show'
 		else
 			not_found
 		end
