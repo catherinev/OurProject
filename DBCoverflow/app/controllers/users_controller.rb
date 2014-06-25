@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 		if current_user == User.find(params[:id])
 			render user_path(current_user)
 		else
-			# we are about to build 404 redirect
+			not_found
 		end
 	end
 
