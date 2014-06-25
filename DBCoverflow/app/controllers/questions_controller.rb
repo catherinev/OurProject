@@ -28,10 +28,22 @@ class QuestionsController < ApplicationController
 
 
   def edit
+    @question = Question.find(params[:id])
+    @user = current_user
+    @categories = Category.all
+    if @question
+      render :edit
+    end
   end
 
   def update
-
+    @question = Question.find(params[:id])
+    if @question.update_attributes(question_params)
+       flash[:notice] = "you win"
+       redirect_to question_path(@question)
+    else
+      render :edit
+    end
   end
 
 end
