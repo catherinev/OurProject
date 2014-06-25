@@ -4,6 +4,9 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = Question.find(params[:id])
+    @comments = @question.comments.all
+    @answers = @question.answers.all
   end
 
   def create
