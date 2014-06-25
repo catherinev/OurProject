@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  include QuestionsHelper
   def index
     @questions = Question.all
   end
@@ -9,19 +10,28 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.all
   end
 
-  def create
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   def new
     @categories = Category.all
+    @question = Question.new
   end
+
+  def create
+    @question = Question.new(question_params)
+    @question.user_id = current_user.id
+    if @question.save
+      redirect_to question_url(@question)
+    else
+      render :new, :flash => {:error => "We were not able to add your question."}
+    end
+
+  end
+
 
   def edit
   end
+
+  def update
+
+  end
+
 end
