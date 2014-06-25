@@ -1,11 +1,16 @@
 <h2>Sign In</h2>
-<%= form_for(:session, url: sessions_path) do |f| %>
 
-	<%= f.label :email %>
-	<%= f.text_field :email %>
+	<% if @error %>
+		<div id="error_message"><%= @error %></div><br>	
+	<% end %>
 
-	<%= f.label :password %>
-	<%= f.password_field :password %>
+	<%= form_for(:session, url: sessions_path) do |f| %>
 
-	<%= f.submit "Sign In" %>
-<% end %>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.submit "Sign In" %>
+	<% end %>
