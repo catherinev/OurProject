@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users, except: [:destroy, :index]
   resources :questions do
     resources :comments
     resources :answers
