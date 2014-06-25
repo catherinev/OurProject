@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
 	def show
 		if current_user == User.find(params[:id])
+			@questions = current_user.questions
 			render 'show'
 		else
 			not_found
