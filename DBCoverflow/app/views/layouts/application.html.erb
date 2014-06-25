@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header> <%= link_to "Home", questions_path %><%if session[:user_id]%><%= link_to "Add Question", new_question_path %><%= link_to "Logout", [Placeholder for session route] %><%else%> <%= link_to "Login", [Placeholder] %><%end%></header>
 
 <%= yield %>
 
