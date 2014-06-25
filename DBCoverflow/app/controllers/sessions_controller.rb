@@ -1,12 +1,6 @@
 
 class SessionsController < ApplicationController
 
-# experimenting with the idea that we don't need this
-	# def new
-	# 	@user = User.new
-
-	# end
-
 	def create
 		@user = User.find_by_email(params[:session][:email])
 		if @user && @user.authenticate(params[:session][:password])
@@ -22,6 +16,5 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		redirect_to questions_path
 	end
-
 
 end
