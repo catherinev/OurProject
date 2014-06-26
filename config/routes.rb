@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'categories/index'
 
-  get 'categories/show'
 
   resources :users, except: [:destroy, :index]
   resources :questions do
