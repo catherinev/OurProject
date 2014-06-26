@@ -64,5 +64,11 @@ feature 'User browsing the website'  do
     it 'should not have the Add Answer button' do
       expect(page).to_not have_content("Add Answer")
     end
+
+    it 'should redirect the questions index when home link clicked' do
+      click_link("Home")
+      expect(current_url).to eq questions_url
+    end
+
   end
 end
