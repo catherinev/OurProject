@@ -18,6 +18,9 @@ DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com
 
 All of our tests are written in RSpec, not Rails' standard Test suite. Note that we are using the ['shoulda'](https://github.com/thoughtbot/shoulda) gem in many of our model and controller tests, as well as ['capybara'](https://github.com/jnicklas/capybara) for our feature/integration tests. Much of the app's functionality is determined by whether a user is logged in or not.
 
+We use [Travis](http://docs.travis-ci.com/) for continuous integration testing, and [SimpleCov](https://github.com/colszowka/simplecov) for test coverage reporting.
+
+
 ## Agile Development
 
 This app is still very much in development. Our team uses agile methodology, and manages our scrum board with [Trello](https://trello.com/b/kI5uhSO1/dbc-overflow). Outside of in-person meetings, communication (including gitHook notification of pull requests) happens via [HipChat](https://devbootcamp-chicago.hipchat.com/chat?focus_jid=121051_fireflies-2014@conf.hipchat.com). For access to either or both of those resources, please contact a team member.
