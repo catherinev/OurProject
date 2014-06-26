@@ -39,6 +39,7 @@ group :development, :test do
 	gem 'capybara', '~> 2.2.1'
 	gem 'database_cleaner', '~>1.2.0'
   gem 'shoulda-matchers', require: false
+  gem 'rack_session_access'
 end
 
 # Use Capistrano for deployment
