@@ -7,7 +7,7 @@ DBCoverflow is an app for Dev Bootcamp staff, students, and alumni to provide on
 DBCoverflow is similar to [stackoverflow](http://stackoverflow.com/) in that it provides a persistent repository for technical questions and answers, but slightly different in that its categories for questions will also include areas such as Engineering Empathy, Logistics, etc. Questions and support regarding specific topics and challenges are also encouraged.
 
 ## User Perspective
-===================
+
 Check out [DBCoverflow](http://dbc-overflow-ckmr.herokuapp.com/)! Check out some questions, answers, and comments, and create an account for yourself. Feel free to post some stuff!
 
 ## Dependencies
