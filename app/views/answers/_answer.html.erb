@@ -1,0 +1,6 @@
+ <li><%=answer.content%> <%=answer.user.username%> <%=answer.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%></li>
+<ul>
+  <%answer.comments.all.each do |comment|%>
+    <li><%=comment.content%> &nbps -<%=comment.user.username%></li>
+  <%end%>
+</ul>

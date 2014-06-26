@@ -1,6 +1,6 @@
 <h1><%=@question.title%></h1>
 <p><%=@question.content%></p>
-<% if @question.user_id == current_user.id %>
+<% if current_user && @question.user_id == current_user.id %>
   <%= link_to "Edit", edit_question_path(@question)%>
 <%end%>
 <% @comments.each do|comment| %>
@@ -11,14 +11,16 @@
 
 
 <h2>Answers</h2>
-<ul>
+
+  <%=form_for :answer, html: {class: "answerform", id: "#{@question.id}"} do |f|%>
+    <%=f.label :content%>
+    <%=f.text_area :content%>
+    <%=f.submit "Post Answer"%>
+  <%end%>
+<button class= 'addAnswer'>Add Answer</button>
+<ul class="answers">
 <% @answers.each do |answer| %>
-  <li><%=answer.content%> <%=answer.user.username%> <%=answer.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%></li>
-  <ul>
-    <%answer.comments.all.each do |comment|%>
-      <li><%=comment.content%> &nbps -<%=comment.user.username%></li>
-    <%end%>
-  </ul>
+ <%=render answer, answer: answer, layout: false%>
 <%end%>
 </ul>
 
