@@ -18,10 +18,7 @@ DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com
 
 ## Contact Us and/or Contribute
 
-DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach us or to contribute, submit an issue or pull request to this repo. Please be sure to use the Pickles-Approved git process below.
-
-
-
+DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach us or to contribute, submit an issue or pull request to this repo. Please be sure to use the Pickles-Approved git process below, as well as our schema and other documentation.
 
 
 
@@ -40,7 +37,17 @@ DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach
 5. git push origin {your_branch_name}
 6. On GitHub, submit a pull request
 
-Five day project to create something beautiful
-
+## DBCoverflow Schema:
 
 ![alt tag](schema.jpeg)
+
+## Testing
+
+All of our tests are written in RSpec, not Rails' standard Test suite. Note that we are using the ['shoulda'](https://github.com/thoughtbot/shoulda) gem in many of our model and controller tests, as well as ['capybara'](https://github.com/jnicklas/capybara) for our feature/integration tests. Much of the app's functionality is determined by whether a user is logged in or not.
+
+## Agile Development
+
+This app is still very much in development. Our team uses agile methodology, and manages our scrum board with [Trello](https://trello.com/b/kI5uhSO1/dbc-overflow). Communication 
+
+
+
