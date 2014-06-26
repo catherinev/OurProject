@@ -17,6 +17,7 @@
 			<%= link_to "Profile", user_path(current_user) %>
 		<%else%>
 			<%= link_to "Login", new_session_path %>
+      <%= link_to "Create Account", new_user_path %>
 		<%end%>
 	</header>
 
