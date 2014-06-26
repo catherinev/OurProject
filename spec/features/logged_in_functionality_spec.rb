@@ -79,8 +79,6 @@ feature 'User can answer a question' do
       expect(page).to have_content('this is my content')
     end
   end
-
-
 end
 
 feature 'User can edit their question' do
