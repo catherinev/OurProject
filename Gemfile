@@ -42,6 +42,8 @@ group :development, :test do
   gem 'rack_session_access'
 end
 
+gem 'simplecov', :require => false, :group => :test
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
