@@ -1,6 +1,7 @@
 $(document).ready( function(){
   $('.commentform').hide();
   $('.answerform').hide();
+  $('.answercommentform').hide();
   $('.addAnswer').on("click",function(event){
     event.preventDefault();
     $('.answerform').show();
@@ -33,7 +34,7 @@ $(document).ready( function(){
     event.preventDefault();
     var data = $(this).serialize();
     var question_id = $(this).attr('id');
-    var url =  '/questions/' + question_id +'/comment';
+    var url =  '/questions/' + question_id +'/comments';
     $.post(url, data, function(response){
       console.log(response);
       $('.commentform')[0].reset();

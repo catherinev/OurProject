@@ -1,0 +1,5 @@
+<li>
+  <%= comment.content %>
+  <%= comment.user.username %>
+  <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%>
+</li>

@@ -5,7 +5,6 @@
 <%end%>
 
  <%=form_for :comment, html: {class: "commentform", id: "#{@question.id}"} do |f|%>
-    <%=f.hidden_field :parent_type, value: "question" %>
     <%=f.label :content%>
     <%=f.text_area :content%>
     <%=f.submit "Post Comment"%>
@@ -14,12 +13,11 @@
 <button class= 'addComment'>Add Comment</button>
 <%end%>
 
-
-<% @comments.each do|comment| %>
-  <%=comment.content%> <strong><%=comment.user.username%></strong>
-  <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%>
-
+<ul class="comments">
+<% @question.comments.each do |comment| %>
+ <%= render comment %>
 <%end%>
+</ul>
 
 
 <h2>Answers</h2>
@@ -35,6 +33,21 @@
 <ul class="answers">
 <% @answers.each do |answer| %>
  <%=render answer, answer: answer, layout: false%>
+ <%if current_user%>
+<button class= 'addAnswerComment'>Add Comment</button>
+<%end%>
+  <%=form_for :comment, html: {class: "answercommentform", id: "#{@question.id}"} do |f|%>
+    <%=f.label :content%>
+    <%=f.text_area :content%>
+    <%=f.submit "Post Comment"%>
+    <%end%>
+<ul>
+  <ul class="answercomments">
+<% answer.comments.each do |comment| %>
+ <%= render comment %>
+<%end%>
+</ul>
+</ul>
 <%end%>
 </ul>
 
