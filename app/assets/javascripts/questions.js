@@ -1,9 +1,9 @@
 $(document).ready( function(){
-
+  $('.answerform').hide();
   $('.addAnswer').on("click",function(event){
 g
     event.preventDefault();
-    $('.answerform').css("display","inline");
+    $('.answerform').show();
     $('.addAnswer').hide();
   });
   $('.answerform').on('submit', function(event){
