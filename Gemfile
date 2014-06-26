@@ -38,6 +38,7 @@ group :development, :test do
 	gem 'rspec-rails', '~>2.14.1'
 	gem 'capybara', '~> 2.2.1'
 	gem 'database_cleaner', '~>1.2.0'
+  gem 'shoulda-matchers', require: false
 end
 
 # Use Capistrano for deployment
