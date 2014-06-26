@@ -8,7 +8,9 @@ categories.each do |category|
   Category.create(title: category)
 end
 
-20.times {Question.create(category_id: (rand(10) + 1) , title: Faker::Lorem.word, content: Faker::Lorem.paragraph, user_id: (rand(20) + 1))}
+User.all.each do |user|
+  5.times {user.questions <<Question.create(category_id: (rand(10) + 1) , title: Faker::Lorem.word, content: Faker::Lorem.paragraph)}
+end
 
 
 
