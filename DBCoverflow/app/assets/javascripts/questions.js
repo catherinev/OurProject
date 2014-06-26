@@ -1,7 +1,7 @@
 $(document).ready( function(){
 
   $('.addAnswer').on("click",function(event){
-
+g
     event.preventDefault();
     $('.answerform').css("display","inline");
     $('.addAnswer').hide();
