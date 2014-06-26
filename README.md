@@ -11,13 +11,13 @@ DBCoverflow is similar to [stackoverflow](http://stackoverflow.com/) in that it 
 Check out [DBCoverflow](http://dbc-overflow-ckmr.herokuapp.com/)! Check out some questions, answers, and comments, and create an account for yourself. Feel free to post some stuff!
 
 ## Dependencies
-===============
+
 DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com/login). 
 
 
 
 ## Contact Us and/or Contribute
-===============================
+
 DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach us or to contribute, submit an issue or pull request to this repo.
 
 
