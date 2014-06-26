@@ -128,4 +128,48 @@ feature 'User can edit their answer' do
   end
 end
 
+feature 'User can comment on a question' do
+  context 'on question page' do
+
+    xit 'should show a comment for question' do
+      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      page.set_rack_session(:user_id => @user.id)
+
+      visit question_path(question.id)
+      within('#question_comment') do
+        click_button('Comment')
+      end
+      within('#add_comment_to_question') do
+        fill_in 'Content', with: "This is a really nice question. Thanks for asking."
+      end
+      click_button('Comment')
+      expect(page).to have_content('This is a really nice question. Thanks for asking.')
+    end
+  end
+end
+
+feature 'User can comment on an answer' do
+  context 'on question page' do
+
+    xit 'should show a comment on an answer for question' do
+      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      answer = Answer.create(content: "API",user_id: @user.id ,question_id: question.id )
+      page.set_rack_session(:user_id => @user.id)
+
+      visit question_path(question.id)
+      within('#comment_on_answer') do
+        click_button('Comment')
+      end
+      within('#add_comment_to_answer') do
+        fill_in 'Content', with: "This answer is incorrect!"
+      end
+      click_button('Comment')
+      expect(page).to have_content('This answer is incorrect!')
+    end
+  end
+end
+
+
 
