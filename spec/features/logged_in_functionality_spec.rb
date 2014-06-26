@@ -47,5 +47,19 @@ feature 'User browsing the website'  do
       expect(page.get_rack_session).to_not have_key("user_id")
     end
   end
+
+  context 'on showpage and logged in' do
+    before do
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      page.set_rack_session(:user_id => @user.id)
+      @question = Question.create(title: "BlahBlah", content: "More Blah", user_id: @user.id, category_id: 1)
+      @question.answers << Answer.create(content: "You should do this...", user_id: @user.id)
+      visit question_url(@question)
+    end
+
+    it 'should show the Add Answer button' do
+      expect(page).to have_content("Add Answer")
+    end
+  end
 end
 
