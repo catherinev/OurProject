@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>DBCoverflow</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 	<header>
 		<%= link_to "Home", questions_path %>
+    <%= link_to "Browse", categories_path %>
 		<%if session[:user_id]%>
 			<%= link_to "Add Question", new_question_path %>
 			<%= link_to "Logout", session_path(current_user), method: "delete" %>
