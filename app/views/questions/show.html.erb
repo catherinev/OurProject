@@ -1,6 +1,6 @@
 <h1><%=@question.title%></h1>
 <p><%=@question.content%></p>
-<% if @question.user_id == current_user.id %>
+<% if current_user && @question.user_id == current_user.id %>
   <%= link_to "Edit", edit_question_path(@question)%>
 <%end%>
 <% @comments.each do|comment| %>
