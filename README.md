@@ -47,7 +47,7 @@ DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach
 
 ## Licensing
 
-
+This code is free to use under the terms of the MIT license.
 
 
 
