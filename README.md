@@ -18,20 +18,27 @@ DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com
 
 ## Contact Us and/or Contribute
 
-DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach us or to contribute, submit an issue or pull request to this repo.
+DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach us or to contribute, submit an issue or pull request to this repo. Please be sure to use the Pickles-Approved git process below.
 
 
 
 
 
 
-## Pickles-approved git process
-1. git checkout {your_new_branch_name}
-2. git add/commit
+## Pickles-Approved Git Process
+
+To start working on the app:
+1. git clone "the master"
+2. git checkout -b "your_branch_name"
+3. git pull origin master
+
+To submit a pull request:
+1. git checkout {your_branch_name}
+2. git add/commit your changes
 3. git pull origin master (will try to merge; fix conflicts if necessary)
-4. add/commit 
-5. git push origin {your_branch}
-6. pull request
+4. git add/commit any changes
+5. git push origin {your_branch_name}
+6. On GitHub, submit a pull request
 
 Five day project to create something beautiful
 
