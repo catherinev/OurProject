@@ -27,12 +27,12 @@ DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach
 
 ## Pickles-Approved Git Process
 
-To start working on the app:
+# To start working on the app:
 1. git clone "the master"
 2. git checkout -b "your_branch_name"
 3. git pull origin master
 
-To submit a pull request:
+# To submit a pull request:
 1. git checkout {your_branch_name}
 2. git add/commit your changes
 3. git pull origin master (will try to merge; fix conflicts if necessary)
