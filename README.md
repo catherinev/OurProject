@@ -1,4 +1,4 @@
-DBCoverflow ![alt text](https://travis-ci.org/catherinev/OurProject.svg?branch=master)
+DBCoverflow [![Build Status](https://travis-ci.org/catherinev/OurProject.svg?branch=master)](https://travis-ci.org/catherinev/OurProject)
 ===========
 ## Overview
 
