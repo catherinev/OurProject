@@ -1,20 +1,19 @@
 Rails.application.routes.draw do
 
-  get 'categories/index'
 
-  get 'categories/show'
 
   resources :users, except: [:destroy, :index]
   resources :questions do
-    resources :comments
+    resources :comments, only: [:create]
     resources :answers
   end
   resources :answers, only: [] do
-    resources :comments
+    resources :comments, only: [:create]
   end
   resources :categories, only: [:index, :show]
 
   resources :sessions, only: [:new, :create, :destroy]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
