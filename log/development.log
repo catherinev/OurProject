@@ -1,0 +1,1532 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:38:30 -0500
+
+ActiveRecord::NoDatabaseError (FATAL:  database "DBCoverflow_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:891:in `rescue in connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.7ms)
+  [1m[36m (172.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (13.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625144242)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (108.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (14.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144242"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140625144315)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (29.6ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144315"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20140625145455)
+  [1m[35m (16.1ms)[0m  BEGIN
+  [1m[36m (20.2ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "category_id" integer, "user_id" integer, "content" text, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145455"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAnswers (20140625145533)
+  [1m[35m (16.6ms)[0m  BEGIN
+  [1m[36m (19.8ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "question_id" integer, "content" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145533"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20140625145646)
+  [1m[35m (16.5ms)[0m  BEGIN
+  [1m[36m (24.9ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "parent_type" character varying(255), "parent_id" integer, "user_id" integer, "content" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145646"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (16.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.090322"], ["email", "joannie.osinski@kuphalklein.biz"], ["password_digest", "$2a$10$PeXdseCm043nyhoSpCNTUOdzDne7dXh3pAeI7F3XKI7ImrsCaAEOa"], ["updated_at", "2014-06-27 19:39:17.090322"], ["username", "rudy"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:17.203016"], ["email", "nona_feil@daugherty.org"], ["password_digest", "$2a$10$3LyljhNlDcygWmscaTybqe9EybxRP2D2tGi2uSZzK9SgjYGYsrTYK"], ["updated_at", "2014-06-27 19:39:17.203016"], ["username", "kirk"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.285244"], ["email", "eveline@mccullough.biz"], ["password_digest", "$2a$10$r4yqIyzUJVLCAiK07gRnnuccjqENtOXgIgld78Lm23d2F1JaKM556"], ["updated_at", "2014-06-27 19:39:17.285244"], ["username", "eduardo.hartmann"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:17.369960"], ["email", "samantha@rodriguez.name"], ["password_digest", "$2a$10$6Byo7q3s8GU7utwtYgvOXeKqAf8vkhGCBS/.5jzn7vu3i0U64OiSW"], ["updated_at", "2014-06-27 19:39:17.369960"], ["username", "barney_pfeffer"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.451460"], ["email", "johnathon@gislason.com"], ["password_digest", "$2a$10$vnHC2p3XGPAxDOooGZr4iOi5Mp7Y5XNNfNKIVZU96NcmVgX3gcpnO"], ["updated_at", "2014-06-27 19:39:17.451460"], ["username", "brandyn.eichmann"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:17.533863"], ["email", "khalid_nader@treutelhudson.org"], ["password_digest", "$2a$10$b6lOthe4NlHTA7EEx2DevOUJ8DbUG5KzNkWA7qXXyNlB.MIy52wrW"], ["updated_at", "2014-06-27 19:39:17.533863"], ["username", "leonardo"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.611997"], ["email", "otha@ruecker.org"], ["password_digest", "$2a$10$Ge11nCXnMp7YuJVfZYfG1.RlQiPafvpfj5hkqJxi8uCFN2KsiZIKK"], ["updated_at", "2014-06-27 19:39:17.611997"], ["username", "jamil.olson"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:17.689945"], ["email", "genoveva.leffler@breitenberg.name"], ["password_digest", "$2a$10$/8LjntxyitZGrVkhHxTdOehrBO/nPpQ8S64NfSxWuI30KXg1BjPJe"], ["updated_at", "2014-06-27 19:39:17.689945"], ["username", "jason.murazik"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.767997"], ["email", "justine@naderkling.org"], ["password_digest", "$2a$10$OCV0XV/XP0oOSjMTTtAowea0CVgqYbEsEyAghSgM73mdML4Mj435."], ["updated_at", "2014-06-27 19:39:17.767997"], ["username", "theodora_hirthe"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:17.846057"], ["email", "maia.heidenreich@roobreilly.biz"], ["password_digest", "$2a$10$.RLDpq47MVle6qfCsffiy.jan32.T9HYNi/0nsatXcmWGEBjaqjJy"], ["updated_at", "2014-06-27 19:39:17.846057"], ["username", "dimitri"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:17.923801"], ["email", "arnoldo.will@nicolasblanda.com"], ["password_digest", "$2a$10$XZzLxQnGoUTcduHL2J3w0OZnKzBsLH23FWGqmAUZHCIXbmRKFurVS"], ["updated_at", "2014-06-27 19:39:17.923801"], ["username", "rosalia"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.001706"], ["email", "freida.heel@kuvalishudson.com"], ["password_digest", "$2a$10$Ag4AwlBV/daFymJJN/PcdOz1lxheqZwqzIQtL9ewdkIYq7nGj8UAK"], ["updated_at", "2014-06-27 19:39:18.001706"], ["username", "estrella_stanton"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.085967"], ["email", "bette@kertzmannblick.info"], ["password_digest", "$2a$10$k7Jk0s4HVCJxyMKrBJutruutDTSOwYeTFD0NEAflzY0iXKh2f..Yq"], ["updated_at", "2014-06-27 19:39:18.085967"], ["username", "lyda_kozey"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.164085"], ["email", "laurie_mayert@hermiston.biz"], ["password_digest", "$2a$10$q9J6eTKmKLZbOz8BwTPKqOMaN78ZwJEC3q7HOpdraf3hL0W1SXVTy"], ["updated_at", "2014-06-27 19:39:18.164085"], ["username", "aiden_balistreri"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.245377"], ["email", "darius_langosh@cristcrona.name"], ["password_digest", "$2a$10$u4Q75AecGFZn5SnwFcvO1.RI/BxrW54eMYBlQL0kaLArZ0fv0rm22"], ["updated_at", "2014-06-27 19:39:18.245377"], ["username", "major"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.323442"], ["email", "garland.zulauf@grady.name"], ["password_digest", "$2a$10$Xt66OLXS8j3oX7V0I8eOX.SIbcXBbfg.NDZ4bJGU3T4RSl8FsZ.Fe"], ["updated_at", "2014-06-27 19:39:18.323442"], ["username", "solon"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.404846"], ["email", "joy.ruecker@schuppenienow.net"], ["password_digest", "$2a$10$wKYYlNodabqqnZQ0.KvkluGGQkfTOzyKpGLmH784QDJk25Zr.tVN6"], ["updated_at", "2014-06-27 19:39:18.404846"], ["username", "zola"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.484919"], ["email", "bartholome.schmitt@labadie.org"], ["password_digest", "$2a$10$3G2Bsv0uLk6rmynR0j990erpBlOTRifXsxZ.4L1l4YV7xfmH9efkK"], ["updated_at", "2014-06-27 19:39:18.484919"], ["username", "erling"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.568859"], ["email", "giovanny_mcclure@abshire.org"], ["password_digest", "$2a$10$93FqtVKqrafd/drMrsQ0aOXU5TLU7WxSqE92fGezsZFIO6Ht/8v.m"], ["updated_at", "2014-06-27 19:39:18.568859"], ["username", "nellie.schmeler"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.650655"], ["email", "roderick.mcglynn@lang.org"], ["password_digest", "$2a$10$/orlyI2tRehdG7Do0UZRiujJWWCt7SQnK0CkVW6lLypurWEMHJjvK"], ["updated_at", "2014-06-27 19:39:18.650655"], ["username", "cathrine.mills"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (16.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.691176"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:39:18.691176"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.710580"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:39:18.710580"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.713003"], ["title", "OOP"], ["updated_at", "2014-06-27 19:39:18.713003"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.714918"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:39:18.714918"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.716738"], ["title", "API"], ["updated_at", "2014-06-27 19:39:18.716738"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.718825"], ["title", "methods"], ["updated_at", "2014-06-27 19:39:18.718825"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.720739"], ["title", "recursion"], ["updated_at", "2014-06-27 19:39:18.720739"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.725620"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:39:18.725620"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:18.727507"], ["title", "iteration"], ["updated_at", "2014-06-27 19:39:18.727507"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:18.729084"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:39:18.729084"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.7ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 3], ["content", "Dicta harum saepe. Rerum velit voluptas quo illo repellat blanditiis. Maxime fugit est ut et veniam repellendus."], ["created_at", "2014-06-27 19:39:18.880503"], ["title", "minus"], ["updated_at", "2014-06-27 19:39:18.880503"], ["user_id", 1]]
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:40.199143"], ["email", "karine@turner.name"], ["password_digest", "$2a$10$6ujP1fpnJUE12W0872TIbOO1toTinKGhiKpMzgwSMkvKIn021Zlv6"], ["updated_at", "2014-06-27 19:39:40.199143"], ["username", "alfonso"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:40.280896"], ["email", "lisette.bode@schumm.net"], ["password_digest", "$2a$10$6aqUWyoxPkFPjv4sbuVEgepi7O8gwAAMnNmSK8Ytj/z.jSNxeD2iS"], ["updated_at", "2014-06-27 19:39:40.280896"], ["username", "dulce"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:40.365262"], ["email", "theresia@paucekgaylord.com"], ["password_digest", "$2a$10$LU8jCrzkXXkvyn6USG7LteeRgk6KABE2JJvNs24USjxZWHXzOV5Te"], ["updated_at", "2014-06-27 19:39:40.365262"], ["username", "isabell.block"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:40.442864"], ["email", "chadd_grimes@spinka.name"], ["password_digest", "$2a$10$lb1tVkDM0Q1c8mYQQBLieuPPcqQum8Dnuq0wl6NYj08BrrxO4hPm."], ["updated_at", "2014-06-27 19:39:40.442864"], ["username", "vena"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:40.523835"], ["email", "mireille.rempel@gleason.info"], ["password_digest", "$2a$10$Vpa.weA1LPmKW2TGcw2KGukEOSKUwmQ6njC2h9E9cU6NKfLHNmJSu"], ["updated_at", "2014-06-27 19:39:40.523835"], ["username", "fae_halvorson"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:40.602043"], ["email", "katharina.hegmann@greenholt.com"], ["password_digest", "$2a$10$Bo4LtHZ/PbqQMQ8DKpNPpuA6S8l8Tt185LDB3KFE.E3UUymyUTjX2"], ["updated_at", "2014-06-27 19:39:40.602043"], ["username", "ola"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:40.680638"], ["email", "crystel@deckow.net"], ["password_digest", "$2a$10$QtkPwLxbcos7Q.WOfQURp.EqCuAO6p6U7odXVI3D0x8LfQsOcF5Uu"], ["updated_at", "2014-06-27 19:39:40.680638"], ["username", "loma.armstrong"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:40.764903"], ["email", "oswaldo@christiansen.biz"], ["password_digest", "$2a$10$3/HoVoT9oC6gWQcUu/jUTORdF5AaNv24am5F7E83HdHY38JUkTLOy"], ["updated_at", "2014-06-27 19:39:40.764903"], ["username", "keira_steuber"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:40.843222"], ["email", "eloise_walker@cartwrightmetz.net"], ["password_digest", "$2a$10$WG6XMutRt7FSsw1VGdvaf.5QCWLEo0x2zgA/cV86Tj1g7a4iwgnxK"], ["updated_at", "2014-06-27 19:39:40.843222"], ["username", "arlene_wiza"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:40.923553"], ["email", "jillian@rogahn.biz"], ["password_digest", "$2a$10$zGN9y4.2SBSTDc99wg9nmOuCQLDR6KlstvkmG5n0mvy8n9JV/uZDi"], ["updated_at", "2014-06-27 19:39:40.923553"], ["username", "korey_pfeffer"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.005655"], ["email", "lincoln@white.biz"], ["password_digest", "$2a$10$4D3fs8Idsb90MnC2YOUrtubt82qINXCQQoU4O8YsGWiYU2Z9iDZbG"], ["updated_at", "2014-06-27 19:39:41.005655"], ["username", "madisyn"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.085166"], ["email", "bernadine.stamm@reichert.biz"], ["password_digest", "$2a$10$VDPT71.nlpGOWz1Ygdsuc.tkhOgdsQgbCP8kHYgd1kTzVLfQSWSvK"], ["updated_at", "2014-06-27 19:39:41.085166"], ["username", "seth"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.166085"], ["email", "heloise@hudson.org"], ["password_digest", "$2a$10$x3zyTwjsDn3xuUTkNXfcg.eznxLCzn2qVP49Tg6lKNAvxgz5.9JDi"], ["updated_at", "2014-06-27 19:39:41.166085"], ["username", "kathryn.schmitt"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.249395"], ["email", "christine_lowe@ohara.name"], ["password_digest", "$2a$10$Wo/udvkX/6Cqv8d9wJJl7.03ZTIwMGjPyMNISAzF/FnLGpMr9jXsy"], ["updated_at", "2014-06-27 19:39:41.249395"], ["username", "aliza.purdy"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.330501"], ["email", "una.gutkowski@lakin.net"], ["password_digest", "$2a$10$rL0MF3zE1CWFK0yBRPx/6OsYlyJdZxL0f9ga3ju1VOugiOAOMNpum"], ["updated_at", "2014-06-27 19:39:41.330501"], ["username", "vivian.adams"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.410084"], ["email", "norma.haley@donnellyrunolfsdottir.biz"], ["password_digest", "$2a$10$A0U8OjA6GhiUh8wTv4gwo.eiAqU62mm8q9ggBQxlGOfep/e10uz/O"], ["updated_at", "2014-06-27 19:39:41.410084"], ["username", "michael_emmerich"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.491007"], ["email", "tyler@cruickshank.biz"], ["password_digest", "$2a$10$LaKlXJJX3Bi8nj4aujI5Neyof9bAPW1fUbLPDdT4tEZGyNRtvJcbC"], ["updated_at", "2014-06-27 19:39:41.491007"], ["username", "elise"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.568690"], ["email", "destiney@marksritchie.com"], ["password_digest", "$2a$10$RTGLdU6ec/hIV6kf4/c/J.Yi9a5GItsLLkqhl6SyOTX4dsIXK1Gam"], ["updated_at", "2014-06-27 19:39:41.568690"], ["username", "payton.heel"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.646267"], ["email", "urban.zemlak@dickens.info"], ["password_digest", "$2a$10$2TXoRcZtgCSu8jPs9PZTle0JB.HxsPxr9GENGk6JUA4wqWKHsQap6"], ["updated_at", "2014-06-27 19:39:41.646267"], ["username", "hobart_hansen"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.724735"], ["email", "misael@wunschdicki.com"], ["password_digest", "$2a$10$cUFfHwQM0zYmev9KyGQxde57jQ5Zq6CH3.XdjaHU0oZVRxso1bSee"], ["updated_at", "2014-06-27 19:39:41.724735"], ["username", "meaghan.strosin"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.734874"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:39:41.734874"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.737390"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:39:41.737390"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.738923"], ["title", "OOP"], ["updated_at", "2014-06-27 19:39:41.738923"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.740407"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:39:41.740407"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.741918"], ["title", "API"], ["updated_at", "2014-06-27 19:39:41.741918"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.743416"], ["title", "methods"], ["updated_at", "2014-06-27 19:39:41.743416"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.744863"], ["title", "recursion"], ["updated_at", "2014-06-27 19:39:41.744863"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.746458"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:39:41.746458"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:39:41.747983"], ["title", "iteration"], ["updated_at", "2014-06-27 19:39:41.747983"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:39:41.749788"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:39:41.749788"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 7], ["content", "Vel voluptas id soluta. Quod atque enim. Sit expedita quod natus maiores."], ["created_at", "2014-06-27 19:39:41.849529"], ["title", "consequatur"], ["updated_at", "2014-06-27 19:39:41.849529"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:11.702831"], ["email", "pierre@leuschke.com"], ["password_digest", "$2a$10$DXVGFyt0LVGCZIlrDEqUJ.l1fnGvSD6b8TJ.SVGlMaEjCPjNhicGO"], ["updated_at", "2014-06-27 19:40:11.702831"], ["username", "brielle_crona"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:11.788670"], ["email", "lorenza.berge@robel.net"], ["password_digest", "$2a$10$6hGdDKA2x04qRqCKN9/51eJZ6ol9whQPL1wkptacz3.QBxBUAYLPW"], ["updated_at", "2014-06-27 19:40:11.788670"], ["username", "erich"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:11.867882"], ["email", "harmon@shieldsblick.biz"], ["password_digest", "$2a$10$kQn4/yOv9QZ7h2u/EbzR1O4mMTqZ.hXhPZz0j8/Q.e.4ZRjOxmggO"], ["updated_at", "2014-06-27 19:40:11.867882"], ["username", "emma.cronin"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:11.945872"], ["email", "sigmund@marvin.biz"], ["password_digest", "$2a$10$oPEAGw4XYIgubUHUprdcAOoAx4mQ0FvqSb9ld3DBwBLfWjuBdFRpa"], ["updated_at", "2014-06-27 19:40:11.945872"], ["username", "yesenia.towne"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.027162"], ["email", "letha.olson@stark.net"], ["password_digest", "$2a$10$0mBaiTEprYqUHwWMtqOg6OOYHc0rK53D/g4D2YUc2GaCd0D7Lv.3q"], ["updated_at", "2014-06-27 19:40:12.027162"], ["username", "odell"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.111334"], ["email", "maurice@botsfordziemann.net"], ["password_digest", "$2a$10$74Kg1JStIK8avWvRczyA3ea5772vA.s/Gj6UDG64ITzN83XQBDrLS"], ["updated_at", "2014-06-27 19:40:12.111334"], ["username", "rhoda.keler"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.192321"], ["email", "tyreek_murray@rutherford.name"], ["password_digest", "$2a$10$HWu7hxT2YvweeQKX//uak.CtapJHX4WBQHRLo7DkLqvSJDPMmOtPe"], ["updated_at", "2014-06-27 19:40:12.192321"], ["username", "afton"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.270394"], ["email", "wilmer.bergstrom@bechtelarheathcote.org"], ["password_digest", "$2a$10$W93zmAFpBPrOVXD31apJrO8jH0SJcHvZr7DTE.uprhu6Y7gOJoqfm"], ["updated_at", "2014-06-27 19:40:12.270394"], ["username", "fannie.mcdermott"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.350303"], ["email", "virginia@dickihoeger.biz"], ["password_digest", "$2a$10$jRMoyLmsv.1Hh8gOXYryCuhdtjdpPrOciv9cGrsl2ysLGVTbzZPTO"], ["updated_at", "2014-06-27 19:40:12.350303"], ["username", "noemi"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.428012"], ["email", "kameron_harvey@bergstrom.com"], ["password_digest", "$2a$10$lY1WW9gDNHjqEYsF9sp7pum.zUrVCN4BMRMDx/tc2yCR7dBix9LOy"], ["updated_at", "2014-06-27 19:40:12.428012"], ["username", "faustino.lemke"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.510404"], ["email", "kian@kutch.biz"], ["password_digest", "$2a$10$WRdUFx89VsaEoYNmqZ9sTukkxEBXqLN58xoUh4lD5LFmCdB6mwmjW"], ["updated_at", "2014-06-27 19:40:12.510404"], ["username", "breana"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.594106"], ["email", "adolf.bins@greenholt.info"], ["password_digest", "$2a$10$geb12dqOJ5uN9uYZvMpwPuUlzPVc7yB5UX4j51y1NqmO82vqg/tgO"], ["updated_at", "2014-06-27 19:40:12.594106"], ["username", "garland.crist"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.671936"], ["email", "seamus.oconner@handpowlowski.biz"], ["password_digest", "$2a$10$yt/ohwmNl6y9NLBDW8I2fu5bOGYPU9YOQDHzFu8mEgJXDySNRPS4u"], ["updated_at", "2014-06-27 19:40:12.671936"], ["username", "wallace"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.751838"], ["email", "mollie_shanahan@miller.net"], ["password_digest", "$2a$10$SI.Qfhw7ZkJfPWB1WCAiZ.AdfT4ARX5ueJUCHJMPRvjCH35C/kkg6"], ["updated_at", "2014-06-27 19:40:12.751838"], ["username", "nicolas"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.834158"], ["email", "steve@grady.name"], ["password_digest", "$2a$10$3g0TujbLZ7vYgddT2x25LO.LatfJqDFm0FaiSV5vbwaj/jj5FSL0e"], ["updated_at", "2014-06-27 19:40:12.834158"], ["username", "zita.harvey"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:12.913099"], ["email", "erwin_lehner@ledner.com"], ["password_digest", "$2a$10$ILAn1lg3jLh.43UKU.AGjePYpgs4MKAXbBRYKs/iQQeyGRXajemFe"], ["updated_at", "2014-06-27 19:40:12.913099"], ["username", "sibyl"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:12.993449"], ["email", "ashlee_sporer@moorereynolds.org"], ["password_digest", "$2a$10$GWhLzM8Wv4zY6FIMAoeK7OeicKBEWtDJtCSy98mZkU5oQ66vYPuGS"], ["updated_at", "2014-06-27 19:40:12.993449"], ["username", "stephen"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.074557"], ["email", "heather@littlebernhard.info"], ["password_digest", "$2a$10$9at8aYqQlan6uCyou0O5N.PSRvPH1IfPz9RIlIPELh069bQZOYUmK"], ["updated_at", "2014-06-27 19:40:13.074557"], ["username", "roderick_krajcik"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.152985"], ["email", "turner_stehr@schummstracke.biz"], ["password_digest", "$2a$10$ZVcJ1CFftVEsNhf6981UBO6k7/amAPVuZ7vFRoQdx4Vy82AdT2piK"], ["updated_at", "2014-06-27 19:40:13.152985"], ["username", "garret_cremin"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.232047"], ["email", "harrison_mosciski@steuber.name"], ["password_digest", "$2a$10$gDNMXotXFOwDb.JEOxVNr.exKMVb69pMkq3xR/5EivAimyeLG95zi"], ["updated_at", "2014-06-27 19:40:13.232047"], ["username", "riley.reichel"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.242531"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:40:13.242531"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.245369"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:40:13.245369"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.246963"], ["title", "OOP"], ["updated_at", "2014-06-27 19:40:13.246963"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.249146"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:40:13.249146"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.250685"], ["title", "API"], ["updated_at", "2014-06-27 19:40:13.250685"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.252193"], ["title", "methods"], ["updated_at", "2014-06-27 19:40:13.252193"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.253690"], ["title", "recursion"], ["updated_at", "2014-06-27 19:40:13.253690"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.255335"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:40:13.255335"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:40:13.256841"], ["title", "iteration"], ["updated_at", "2014-06-27 19:40:13.256841"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:40:13.258345"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:40:13.258345"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 7], ["content", "Ipsam est inventore harum aperiam rerum soluta. Quaerat nobis officiis sunt iure. Fuga sunt aspernatur provident delectus omnis dolor. Ut doloribus consequatur."], ["created_at", "2014-06-27 19:40:13.360277"], ["title", "hic"], ["updated_at", "2014-06-27 19:40:13.360277"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:40:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12
+  Rendered questions/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 301ms (Views: 278.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:40:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:40:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:40:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:40:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:40:29 -0500
+
+
+Started GET "/search?utf8=%E2%9C%93&q=dfadf&commit=search" for 127.0.0.1 at 2014-06-27 14:40:37 -0500
+
+ActionController::RoutingError (uninitialized constant SearchController):
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (47.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:42:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12
+  Rendered questions/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 274ms (Views: 186.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:42:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:42:53 -0500
+
+
+Started GET "/search/index?utf8=%E2%9C%93&q=adf&commit=search" for 127.0.0.1 at 2014-06-27 14:42:55 -0500
+
+ActionController::RoutingError (uninitialized constant SearchController):
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.5ms)
+
+
+Started GET "/search/index?utf8=%E2%9C%93&q=adf&commit=search" for 127.0.0.1 at 2014-06-27 14:43:16 -0500
+
+ActionController::RoutingError (uninitialized constant SearchController):
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:46:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12
+  Rendered questions/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 306ms (Views: 212.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:10 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:10 -0500
+
+
+Started GET "/search/index?utf8=%E2%9C%93&q=adfasdf&commit=search" for 127.0.0.1 at 2014-06-27 14:46:14 -0500
+
+ActionController::RoutingError (uninitialized constant SearchController):
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.9ms)
+
+
+Started GET "/search/index?utf8=%E2%9C%93&q=adfasdf&commit=search" for 127.0.0.1 at 2014-06-27 14:46:51 -0500
+
+ActionController::RoutingError (uninitialized constant SearchController):
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `const_get'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:238:in `block in constantize'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `each'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `inject'
+  activesupport (4.1.1) lib/active_support/inflector/methods.rb:236:in `constantize'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12[0m
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:56 -0500
+
+
+Started GET "/searches/index?utf8=%E2%9C%93&q=asdf&commit=search" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+Processing by SearchesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asdf", "commit"=>"search"}
+  Rendered searches/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:46:58 -0500
+
+
+Started GET "/searches/index?utf8=%E2%9C%93&q=asdf&commit=search" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+Processing by SearchesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asdf", "commit"=>"search"}
+  Rendered searches/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:25 -0500
+
+
+Started GET "/searches/index?utf8=%E2%9C%93&q=asdafdadf&commit=search" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+Processing by SearchesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asdafdadf", "commit"=>"search"}
+  Rendered searches/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:47:37 -0500
+
+
+Started GET "/searches/index?utf8=%E2%9C%93&q=asdafdadf&commit=search" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+Processing by SearchesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"asdafdadf", "commit"=>"search"}
+  Rendered searches/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:55 -0500
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12
+  Rendered questions/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:48:56 -0500
+
+
+Started POST "/searches/index" for 127.0.0.1 at 2014-06-27 14:49:06 -0500
+
+ActionController::RoutingError (No route matches [POST] "/searches/index"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12[0m
+  Rendered questions/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:51:57 -0500
+
+
+Started POST "/searches/index" for 127.0.0.1 at 2014-06-27 14:52:00 -0500
+
+ActionController::RoutingError (No route matches [POST] "/searches/index"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions"   ORDER BY created_at DESC LIMIT 12
+  Rendered questions/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+
+
+Started GET "/assets/questions.js?body=1" for 127.0.0.1 at 2014-06-27 14:52:19 -0500
+
+
+Started GET "/searches/index?utf8=%E2%9C%93&q=adfadf&commit=search" for 127.0.0.1 at 2014-06-27 14:52:22 -0500
+Processing by SearchesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"adfadf", "commit"=>"search"}
+Completed 500 Internal Server Error in 33ms
+
+Errno::ECONNREFUSED (Connection refused - connect(2)):
+  app/controllers/searches_controller.rb:3:in `index'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (163.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:05.396782"], ["email", "edison@heel.com"], ["password_digest", "$2a$10$pXafZZ3jsD27xkZFyMnWqOWfk0w7xf4K3Gjm4dz6D5L/ornvovRCe"], ["updated_at", "2014-06-27 19:53:05.396782"], ["username", "louvenia_jacobs"]]
+  [1m[35m (28.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:05.512449"], ["email", "oliver_stiedemann@shieldshyatt.name"], ["password_digest", "$2a$10$jZG1axzsiXJzcdBGgCjsdOP4ZvJ7dyDPhKrU4pRT1ZfN/F5MuVgrO"], ["updated_at", "2014-06-27 19:53:05.512449"], ["username", "brice"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:05.593347"], ["email", "natalia@stokes.name"], ["password_digest", "$2a$10$1LnvVGVITyDVnrYNOgwq/eq5CjMZTE8P1y2zkfqtvQGcbKViCMLSW"], ["updated_at", "2014-06-27 19:53:05.593347"], ["username", "wayne"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:05.670561"], ["email", "ruel.labadie@friesen.info"], ["password_digest", "$2a$10$UHJy8f8.nbniDLV14Vjw8OS/Vw4TOzuKAJaOe.YDOw8UWD2mqhlca"], ["updated_at", "2014-06-27 19:53:05.670561"], ["username", "joel"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:05.751397"], ["email", "salvatore@schowalterspinka.com"], ["password_digest", "$2a$10$zjc03z8ANrjeDniH8qlzj.Lpr6WNji8JuT42V4OpmLSvNPeCOCAVC"], ["updated_at", "2014-06-27 19:53:05.751397"], ["username", "grayson.mohr"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:05.832161"], ["email", "garrett@macgyverkutch.net"], ["password_digest", "$2a$10$82vCX4TjAMVNfGXdpVN5Q.xt2.BetQj.Y2mw3uIm0iVpELSReB8t6"], ["updated_at", "2014-06-27 19:53:05.832161"], ["username", "alda_feeney"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:05.912827"], ["email", "giovanni.runolfsdottir@considine.org"], ["password_digest", "$2a$10$v4jBrXzrc3AQy0TPSPLV1u6NGt6LCtQitJFMgMM6EqlDjRyamMnxy"], ["updated_at", "2014-06-27 19:53:05.912827"], ["username", "reid_reynolds"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:05.993811"], ["email", "jadyn@sawayn.com"], ["password_digest", "$2a$10$2zhp2u5vaChKF7exvZq2euin7vkVoil6VicEDHDQWE9aDdVZbCN5q"], ["updated_at", "2014-06-27 19:53:05.993811"], ["username", "jarrett"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.071443"], ["email", "albertha@brakus.org"], ["password_digest", "$2a$10$1vLDN6x4Q.KQ0t3kVihFS.AapTdlBnbufpeLteGCTSoWS3vjRYbR2"], ["updated_at", "2014-06-27 19:53:06.071443"], ["username", "damian.lubowitz"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.148858"], ["email", "shanon@mckenziewisoky.info"], ["password_digest", "$2a$10$JHRWLTKlOH5J22DDNXC7Nub.H8LaD8IH2a5YRl4oFCpAh7MBGW.nG"], ["updated_at", "2014-06-27 19:53:06.148858"], ["username", "harley"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.228978"], ["email", "justice.hahn@howe.com"], ["password_digest", "$2a$10$0gGC2IDztrFZg31u1PnC3OHVE4fUFu8U9QAUfbmoh46k8g2j7VQB2"], ["updated_at", "2014-06-27 19:53:06.228978"], ["username", "brisa"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.306657"], ["email", "trevor.willms@lind.name"], ["password_digest", "$2a$10$09pdDwZN.JWD3MnJnJ.EkeFf4H/tS5IKWTa0fv25pzRjdc7YBtv2u"], ["updated_at", "2014-06-27 19:53:06.306657"], ["username", "sheldon_heidenreich"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.384339"], ["email", "makayla.fay@bartolettilehner.com"], ["password_digest", "$2a$10$IhO4YU/Ck5nqn80zAnUinO1JRb0oXQrqQP3SWNGwWXvGW/KJ8XQ1u"], ["updated_at", "2014-06-27 19:53:06.384339"], ["username", "alanna"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.468689"], ["email", "marcel.dach@boehm.info"], ["password_digest", "$2a$10$y8a4vrbljX4Z4vzCxmoEge51kyr8ybMdQDvE2YOf7E/qDzR9A0Gqi"], ["updated_at", "2014-06-27 19:53:06.468689"], ["username", "finn.prosacco"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.546011"], ["email", "molly@miller.net"], ["password_digest", "$2a$10$2Xg6FGL6jQ/vwdM8kdgkOOhZamB.DNXj0xsDGAqlHWIb1L2cfTM/G"], ["updated_at", "2014-06-27 19:53:06.546011"], ["username", "maida"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.623305"], ["email", "jeremie_gutkowski@howell.name"], ["password_digest", "$2a$10$HkF62gCkWTrNNBKAp4C8rOTqeZRlj3kVa3RCe45nC2QgTE/GLdxrG"], ["updated_at", "2014-06-27 19:53:06.623305"], ["username", "brennon"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.701281"], ["email", "isac_connelly@koch.name"], ["password_digest", "$2a$10$oNNMlKYD0uqrjworltLAYeWHChf3as1pC7S7uDe8pQoVXn9NRT0MC"], ["updated_at", "2014-06-27 19:53:06.701281"], ["username", "marcel_mcdermott"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.782742"], ["email", "gayle@brakus.net"], ["password_digest", "$2a$10$5IIqejnJnte/exIcS.Gf3OneX7kPCqRKCd3POMIKOxinsMtaOZp9u"], ["updated_at", "2014-06-27 19:53:06.782742"], ["username", "kaylie.kunde"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.863705"], ["email", "cydney.kunze@kuhic.info"], ["password_digest", "$2a$10$rgPeGuk1u60rh7Xq7jkDZ.j5Sqq60JeXaep.zTFXIjhK0r6bj8I1i"], ["updated_at", "2014-06-27 19:53:06.863705"], ["username", "mary"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.941607"], ["email", "tyrel_sauer@block.name"], ["password_digest", "$2a$10$yAc4p2/jF1cChRKkq2UWiuBMkxfhQL3HFUa8k21HgEupOKKNSJOMy"], ["updated_at", "2014-06-27 19:53:06.941607"], ["username", "cristopher"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (11.5ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.975093"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:53:06.975093"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.990039"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:53:06.990039"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.992144"], ["title", "OOP"], ["updated_at", "2014-06-27 19:53:06.992144"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.994018"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:53:06.994018"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.995877"], ["title", "API"], ["updated_at", "2014-06-27 19:53:06.995877"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:53:06.997742"], ["title", "methods"], ["updated_at", "2014-06-27 19:53:06.997742"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:06.999422"], ["title", "recursion"], ["updated_at", "2014-06-27 19:53:06.999422"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:53:07.001097"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:53:07.001097"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:53:07.002642"], ["title", "iteration"], ["updated_at", "2014-06-27 19:53:07.002642"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:53:07.004171"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:53:07.004171"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 5], ["content", "Dolores aut sit veritatis. Et odit similique. Ut voluptatem accusantium aspernatur."], ["created_at", "2014-06-27 19:53:07.153900"], ["title", "corrupti"], ["updated_at", "2014-06-27 19:53:07.153900"], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (271.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (41.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (5.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625144242)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (147.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144242"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140625144315)
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (17.1ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144315"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20140625145455)
+  [1m[35m (15.8ms)[0m  BEGIN
+  [1m[36m (12.0ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "category_id" integer, "user_id" integer, "content" text, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145455"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAnswers (20140625145533)
+  [1m[35m (31.7ms)[0m  BEGIN
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "question_id" integer, "content" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145533"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20140625145646)
+  [1m[35m (16.2ms)[0m  BEGIN
+  [1m[36m (19.7ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "parent_type" character varying(255), "parent_id" integer, "user_id" integer, "content" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145646"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (17.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:19.303646"], ["email", "blaze@boyle.net"], ["password_digest", "$2a$10$0gCcNPc89tzyCYioLYqTlevnFy5CugWV911uy5F3ITFV5WdCTrMOW"], ["updated_at", "2014-06-27 19:54:19.303646"], ["username", "casey_dooley"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:19.419203"], ["email", "dino_schaden@mantespinka.biz"], ["password_digest", "$2a$10$Fn7ANT6fHmqjn9/FNh5Hy.wKZh0bpy/l2EwZos2tG/8IkQxf9VMEu"], ["updated_at", "2014-06-27 19:54:19.419203"], ["username", "alvah_reichel"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:19.500514"], ["email", "cristina@kihnflatley.org"], ["password_digest", "$2a$10$8IcqUcD7TwQ8jJx4uroN6.1tnnjlf92HKGVME/9DV6sMNZ2vEPCtK"], ["updated_at", "2014-06-27 19:54:19.500514"], ["username", "jamar.schmitt"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:19.582531"], ["email", "tierra_grimes@heaneyjenkins.info"], ["password_digest", "$2a$10$.wGXr0LnN1QGfmVDQwVSY.ZDFq7HKQaVRCAWwGox8fmb1thLSYk1a"], ["updated_at", "2014-06-27 19:54:19.582531"], ["username", "alfred"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:19.660275"], ["email", "deon.schmitt@rice.org"], ["password_digest", "$2a$10$4x7mP4/7tgZIgDog/wB9UOXiudBukp.t7lV65cEBe.YPTdrLV52qS"], ["updated_at", "2014-06-27 19:54:19.660275"], ["username", "ewell_price"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:19.741805"], ["email", "cordia_pfeffer@schumm.biz"], ["password_digest", "$2a$10$NT0Qq1y8ISaS1ii.MZsXVeJbjvf5Vn1uPTKRouwMn9SIV.c20dmT6"], ["updated_at", "2014-06-27 19:54:19.741805"], ["username", "landen"]]
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:19.838603"], ["email", "toby@wilkinson.biz"], ["password_digest", "$2a$10$kt/izys5ZVa6peVWF77tOuVx9J5HS4Xb857TIme39uNX/OJmzlB0K"], ["updated_at", "2014-06-27 19:54:19.838603"], ["username", "letha"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:19.919333"], ["email", "damien.batz@kuhn.com"], ["password_digest", "$2a$10$ACBnV1rFBFgetmYwbWJQf.ayeDmCg/tut39qBD7W3xdtRaDwePjna"], ["updated_at", "2014-06-27 19:54:19.919333"], ["username", "johnathan_waters"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.000478"], ["email", "pablo@hilll.net"], ["password_digest", "$2a$10$NOA5BrVQybUtVvy.ZrmJ4uRkFEl8k7jsA9v/I8SsyFYJE0gtmR5Yi"], ["updated_at", "2014-06-27 19:54:20.000478"], ["username", "giovanni.kilback"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.080264"], ["email", "efren_koch@ferry.com"], ["password_digest", "$2a$10$dIBgR2Da5RfgeBnT5AzHcu5k8VlvyZJFemJahEQCBBTmzeUArNGPS"], ["updated_at", "2014-06-27 19:54:20.080264"], ["username", "arlie"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.160670"], ["email", "nova.schoen@jones.info"], ["password_digest", "$2a$10$gGEfc2fGioxiZhP7iF7MpeR.IDNQTghi6NXB0PmjqQwV/VTDzHRpa"], ["updated_at", "2014-06-27 19:54:20.160670"], ["username", "landen"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.244717"], ["email", "nathanael.dare@millerpadberg.name"], ["password_digest", "$2a$10$cqiP/sAgzizKwIygEfBGK.BcuXyTWtwRv94UtAk5XYtWsSXQtABl2"], ["updated_at", "2014-06-27 19:54:20.244717"], ["username", "elaina"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.322493"], ["email", "opal_rodriguez@keeling.biz"], ["password_digest", "$2a$10$H5oN6czuydpRMLE0Zplgr.ObSx7n8bDwH991s4wzemFOdgYNNE.DC"], ["updated_at", "2014-06-27 19:54:20.322493"], ["username", "rashad.deckow"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.403405"], ["email", "hanna@hauck.biz"], ["password_digest", "$2a$10$F6f44SksQAREQbelFY991eJs9fyjBVw2t3fXZw/Jbei5Iw3ypAK5C"], ["updated_at", "2014-06-27 19:54:20.403405"], ["username", "twila.lemke"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.481250"], ["email", "oda_skiles@abshire.name"], ["password_digest", "$2a$10$ijXZ0kRPF8dKtk50zlAJounUfTNE./T5PqLR8MrpWB2IoDRjNwwwe"], ["updated_at", "2014-06-27 19:54:20.481250"], ["username", "muriel"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.561461"], ["email", "jimmie@jacobi.biz"], ["password_digest", "$2a$10$.aQgnUZ.V.Zj.m2alOyxgutkHvNasOwMMkQEHJyf8rX2CWXh0vU9K"], ["updated_at", "2014-06-27 19:54:20.561461"], ["username", "imelda"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.641745"], ["email", "johnson.aufderhar@rogahn.info"], ["password_digest", "$2a$10$NNiKQsLdFmilxbrEcB/3x.ejwAf1rmzDqgFGwrBYWsn25wMMaLK42"], ["updated_at", "2014-06-27 19:54:20.641745"], ["username", "eliezer.dibbert"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.719581"], ["email", "brock@grantcollins.info"], ["password_digest", "$2a$10$J3cxn6WnlUZiw0PUM11lIOEGdJ1pBAj3GaAEJYBv.e65BzsnfiLQG"], ["updated_at", "2014-06-27 19:54:20.719581"], ["username", "ella"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.797448"], ["email", "emily@bartoletti.biz"], ["password_digest", "$2a$10$WgHWagHYOIr0qQQumf04OOz/TMLdnwRTQK0VYyKA96AgSrDvhEYzq"], ["updated_at", "2014-06-27 19:54:20.797448"], ["username", "una"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.879846"], ["email", "rozella@frami.name"], ["password_digest", "$2a$10$osWi0OPpqNKE4GvDW0JLs.EPg2Vx4VNSKpEP/rHkWi8drd5e5NIsS"], ["updated_at", "2014-06-27 19:54:20.879846"], ["username", "aisha_pagac"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.904908"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:54:20.904908"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.909770"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:54:20.909770"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.911575"], ["title", "OOP"], ["updated_at", "2014-06-27 19:54:20.911575"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.913094"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:54:20.913094"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.914606"], ["title", "API"], ["updated_at", "2014-06-27 19:54:20.914606"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.916105"], ["title", "methods"], ["updated_at", "2014-06-27 19:54:20.916105"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.917590"], ["title", "recursion"], ["updated_at", "2014-06-27 19:54:20.917590"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.919447"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:54:20.919447"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:54:20.921002"], ["title", "iteration"], ["updated_at", "2014-06-27 19:54:20.921002"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:54:20.922495"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:54:20.922495"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.6ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 5], ["content", "Ex commodi voluptates assumenda quia. Ab voluptatem id laboriosam. Molestiae quam fugit alias minima. Est sed qui ea blanditiis quia recusandae. Vitae illum omnis esse quibusdam fuga eos sit."], ["created_at", "2014-06-27 19:54:21.048635"], ["title", "ut"], ["updated_at", "2014-06-27 19:54:21.048635"], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:46.545450"], ["email", "florida@kiehnfriesen.org"], ["password_digest", "$2a$10$EMmcEPgrXW6jFWI2do1uHOwXKzGGf6OQkrTPSdprTQhS/3oyUrZRW"], ["updated_at", "2014-06-27 19:55:46.545450"], ["username", "emma"]]
+  [1m[35m (15.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:46.655440"], ["email", "justine_shanahan@metz.biz"], ["password_digest", "$2a$10$E/lXtCZR9Q4Swd6JlgOo.edsOMwe4kx5GoFz35Kr1dsq9FVudHYTa"], ["updated_at", "2014-06-27 19:55:46.655440"], ["username", "stephon"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:46.736594"], ["email", "bradley.wintheiser@strosin.net"], ["password_digest", "$2a$10$6hjJWCaIvp8Mpm89ct.0QOny3yw9tydItkgX5gd7hdMyx7BKxuhUm"], ["updated_at", "2014-06-27 19:55:46.736594"], ["username", "ocie"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:46.813893"], ["email", "veda@yundt.biz"], ["password_digest", "$2a$10$afF5F4hQPDoO8n6JHVFJmOefWYrXzjegOy0xLvw4G/68TeK46ofh2"], ["updated_at", "2014-06-27 19:55:46.813893"], ["username", "belle"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:46.891140"], ["email", "rosina@auer.biz"], ["password_digest", "$2a$10$nJPLGj.X/GGCCvuI.1W7sOCb9RtI7fM0dNrDm04qoCSqcVTMW11TC"], ["updated_at", "2014-06-27 19:55:46.891140"], ["username", "sherwood"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:46.971485"], ["email", "kennedy_weimann@wintheisermosciski.net"], ["password_digest", "$2a$10$hwqbd3pe2XFHFHvHJcwnAuLgx74QnDGfabPgsn4Ao3odBPkhesCHy"], ["updated_at", "2014-06-27 19:55:46.971485"], ["username", "michale"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.052154"], ["email", "saul_durgan@strackelabadie.com"], ["password_digest", "$2a$10$aTkqex0Z3jBKFFNsZOuOSOf1JrQ5e.6YbQQwtkMu0gOWM9I0siT0y"], ["updated_at", "2014-06-27 19:55:47.052154"], ["username", "gaston"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.129162"], ["email", "cyrus.kshlerin@treutel.name"], ["password_digest", "$2a$10$g9K1Kzb7UTRVoz0evkm.2.KjozUuTSybHzD.P2DVDJXBuoXRQa1Ti"], ["updated_at", "2014-06-27 19:55:47.129162"], ["username", "uriel"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.206407"], ["email", "alvis@cartergerlach.biz"], ["password_digest", "$2a$10$Snj.N5owpZVOXxmQXZT7XOCJa/A1bYrq1N.LSYD/iWRr73yxyEdWS"], ["updated_at", "2014-06-27 19:55:47.206407"], ["username", "genoveva_fisher"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.287162"], ["email", "dusty_simonis@parisianpowlowski.info"], ["password_digest", "$2a$10$HgNEPsXJQGNSP0nGf9dpfuGNmUMXdLre4e9R4F.H0kHo6HkFFEC/e"], ["updated_at", "2014-06-27 19:55:47.287162"], ["username", "furman"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.364184"], ["email", "alia.bergstrom@bernier.name"], ["password_digest", "$2a$10$ZxuJY5gyUAPyY026BAz96u6c9qPR/KcSUJBhBya2IEI5KyTsaQHKi"], ["updated_at", "2014-06-27 19:55:47.364184"], ["username", "lysanne.ondricka"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.443395"], ["email", "eulalia_spinka@bechtelar.net"], ["password_digest", "$2a$10$y1gu6SbxhRL84ZmpbmUkEuqVMc53AgHgR3L5DEwC5exTQ7HMwEf0q"], ["updated_at", "2014-06-27 19:55:47.443395"], ["username", "minnie"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.520848"], ["email", "amira@hoppe.info"], ["password_digest", "$2a$10$/aGti7dFT86d2vLqHGJMAeKeycR2Hj7PU6/qhdKOreSziwRgTVc2i"], ["updated_at", "2014-06-27 19:55:47.520848"], ["username", "asa"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.599056"], ["email", "josefina_wilderman@howellharvey.info"], ["password_digest", "$2a$10$Ko93geMtT3dkxlPCTWdcMuJVbA.FA4nHGX0B2L2IebEbOLgyijvZa"], ["updated_at", "2014-06-27 19:55:47.599056"], ["username", "ottis.murphy"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.676645"], ["email", "hobart@jast.org"], ["password_digest", "$2a$10$H.OkjPZcy/oPRNDA1Dw3N.Ms5U7qsp9J4XUTMvJj01Vs1EGdJDRQ."], ["updated_at", "2014-06-27 19:55:47.676645"], ["username", "desmond.paucek"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.758780"], ["email", "nathaniel.runolfon@roobbins.name"], ["password_digest", "$2a$10$wLKqAlJHFdVuAFc9qO2vQeSbhXFP31Y5cjzQN3NBupDUqTqBKvXQi"], ["updated_at", "2014-06-27 19:55:47.758780"], ["username", "santino_streich"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.836334"], ["email", "orin@stamm.net"], ["password_digest", "$2a$10$8BlEtTGiZPYpGPQIM2HQ6.c2jP5wS1c7T4ePj6OG9.yakFa4GG94y"], ["updated_at", "2014-06-27 19:55:47.836334"], ["username", "adelle.hilll"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:47.916732"], ["email", "sigrid@crist.biz"], ["password_digest", "$2a$10$t8hW1j2Nn1U4rxGxQp2cAO5BprvmeuYjtd/uK/txtpza2qoLw5Pv2"], ["updated_at", "2014-06-27 19:55:47.916732"], ["username", "eldred_lesch"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:47.993936"], ["email", "nova_schaden@kautzer.com"], ["password_digest", "$2a$10$lV4F39AUIfOr16mYSbgyv.n7bblhOvzsSEDUQ7v3j5HVIHTQuEJCW"], ["updated_at", "2014-06-27 19:55:47.993936"], ["username", "sibyl"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.071842"], ["email", "gladyce_kuhn@blickswaniawski.com"], ["password_digest", "$2a$10$2klcOpnnJkYFY8ujgOWb/.8K54t6iNKv9WA99GQjLAsaFnJqD/x5W"], ["updated_at", "2014-06-27 19:55:48.071842"], ["username", "terrence_okon"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:48.100454"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:55:48.100454"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.103203"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:55:48.103203"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:48.104807"], ["title", "OOP"], ["updated_at", "2014-06-27 19:55:48.104807"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.106481"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:55:48.106481"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:48.108031"], ["title", "API"], ["updated_at", "2014-06-27 19:55:48.108031"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.109510"], ["title", "methods"], ["updated_at", "2014-06-27 19:55:48.109510"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:48.110975"], ["title", "recursion"], ["updated_at", "2014-06-27 19:55:48.110975"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.112440"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:55:48.112440"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:55:48.113925"], ["title", "iteration"], ["updated_at", "2014-06-27 19:55:48.113925"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:55:48.115391"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:55:48.115391"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 7], ["content", "Officia nihil vero nobis. Ipsum beatae amet. Quasi placeat quia quaerat cum. Voluptatem odit ab id quo enim architecto delectus. Eos asperiores consequuntur ab numquam pariatur corporis et."], ["created_at", "2014-06-27 19:55:48.277647"], ["title", "officiis"], ["updated_at", "2014-06-27 19:55:48.277647"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (310.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (76.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140625144242)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (51.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (15.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144242"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140625144315)
+  [1m[35m (15.5ms)[0m  BEGIN
+  [1m[36m (21.9ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625144315"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20140625145455)
+  [1m[35m (16.4ms)[0m  BEGIN
+  [1m[36m (24.4ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "category_id" integer, "user_id" integer, "content" text, "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145455"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAnswers (20140625145533)
+  [1m[35m (16.3ms)[0m  BEGIN
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "question_id" integer, "content" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145533"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20140625145646)
+  [1m[35m (32.0ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "parent_type" character varying(255), "parent_id" integer, "user_id" integer, "content" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140625145646"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (16.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:55.202499"], ["email", "mitchel@smitham.name"], ["password_digest", "$2a$10$NU7g30XVeMz8ukZlUtf5IOnjfb1AZPseGj0FlUS9MGuIUNM35kpYu"], ["updated_at", "2014-06-27 19:56:55.202499"], ["username", "cheyanne"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:55.319984"], ["email", "karelle.welch@turner.info"], ["password_digest", "$2a$10$4TsO4e2RahuvizYFAUN0outs4cdNoAarnvd41kfm.q6l2856BlJSi"], ["updated_at", "2014-06-27 19:56:55.319984"], ["username", "jerod"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:55.397811"], ["email", "easton_carter@schuppe.biz"], ["password_digest", "$2a$10$onnwMsIp15.x5h/f6eqJBO.QHX4.u7FxcIKCjIhEyD9msrbIxaXOO"], ["updated_at", "2014-06-27 19:56:55.397811"], ["username", "lennie"]]
+  [1m[35m (17.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:55.494914"], ["email", "tavares@herman.biz"], ["password_digest", "$2a$10$s0hAJZ1LFxQ9X102PxgxBOLUzMz.D1V5eMYvD66jtXTS6m2snn9se"], ["updated_at", "2014-06-27 19:56:55.494914"], ["username", "coty"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:55.575784"], ["email", "carson@fadel.biz"], ["password_digest", "$2a$10$O/VIfonkZjEWwvmugI5CTuXRytcytvYuDf5nQjXpdnYDzOLLlj9Ny"], ["updated_at", "2014-06-27 19:56:55.575784"], ["username", "marco_reilly"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:55.653180"], ["email", "robbie@walter.net"], ["password_digest", "$2a$10$jDVJQZowW9mS6K.AWthjuu3ebbQ1DCe6Ujsd.e8.5W/VfD6.dir0S"], ["updated_at", "2014-06-27 19:56:55.653180"], ["username", "jerome"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:55.734358"], ["email", "caleigh_ohara@corkeryhahn.com"], ["password_digest", "$2a$10$d/kF7NSNVwLB2PcPxySC.OBbexPkjuBBe2jhghiRaLR4JT4.HPKWW"], ["updated_at", "2014-06-27 19:56:55.734358"], ["username", "moriah.dare"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:55.812012"], ["email", "sophia@cruickshank.info"], ["password_digest", "$2a$10$qZrnwxsvNhIYQoxpuasxhOv0ZQA6uA2lVnsARelxXIo1tvejtsxhC"], ["updated_at", "2014-06-27 19:56:55.812012"], ["username", "rosalia.williamson"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:55.892521"], ["email", "ferne@nienowrunolfon.net"], ["password_digest", "$2a$10$LZXjUNojpPwOG.XCS1RvKefpMDOFJnXLuO89yopghC3GUvUoBwFFO"], ["updated_at", "2014-06-27 19:56:55.892521"], ["username", "jacques.trantow"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:55.973076"], ["email", "elwin@krajcikmoore.biz"], ["password_digest", "$2a$10$D8oZ2364ctV3vlkFYMGJZOGKYh.3zpxWsDJWQypVKA1/jjP0dOXLK"], ["updated_at", "2014-06-27 19:56:55.973076"], ["username", "ashley.dibbert"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.050552"], ["email", "khalil@block.net"], ["password_digest", "$2a$10$ZBN3gIC65dc/ncSzqu654OYBTC./vhXbk.kRDIhXWOgCpNrOqYYom"], ["updated_at", "2014-06-27 19:56:56.050552"], ["username", "kyle.cormier"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.130609"], ["email", "maverick.watsica@watsica.name"], ["password_digest", "$2a$10$DjOGP5F/QEeW6CRp4GDbnOULDVOeD1vfw4SPKfQbnG41GUNBdjZau"], ["updated_at", "2014-06-27 19:56:56.130609"], ["username", "herminio.farrell"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.208886"], ["email", "bernice@dach.biz"], ["password_digest", "$2a$10$S9asI8vW2sgotBfCGru3AeHP5hLGludQhBkRukkstrfuEUNEkLATm"], ["updated_at", "2014-06-27 19:56:56.208886"], ["username", "michael_buckridge"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.286310"], ["email", "buck@toy.org"], ["password_digest", "$2a$10$cVUQGyAbELf9P5mvbNbKnOtmsKNQBlckiKLZzQRIZDclhPnHiSroO"], ["updated_at", "2014-06-27 19:56:56.286310"], ["username", "landen.wilkinson"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.365837"], ["email", "maximillia@smitham.name"], ["password_digest", "$2a$10$a2TVHmoLlvC/zIl7ySIPzupyI2/563aRZhX7JV6Y/8a9hcQH9AxzC"], ["updated_at", "2014-06-27 19:56:56.365837"], ["username", "donald_stracke"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.443335"], ["email", "carmelo.fadel@schaefer.biz"], ["password_digest", "$2a$10$q7JXURquuMtrnqdfNbNWNuIzZqQBntizO6utymNw9yDeT0HGchBiu"], ["updated_at", "2014-06-27 19:56:56.443335"], ["username", "beatrice"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.524249"], ["email", "luigi_hermiston@reichert.biz"], ["password_digest", "$2a$10$7l2Dr9A4cOy15JbtQXqCAOwo82ZebdWNfULdkpEPLfjb1NLYcp//e"], ["updated_at", "2014-06-27 19:56:56.524249"], ["username", "mathew"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.601468"], ["email", "melvina@legros.name"], ["password_digest", "$2a$10$7IF/TBjarr10ubZP9KKEeO15jgyF5m2I4PfCNTYj3kM4gT.jtdaVC"], ["updated_at", "2014-06-27 19:56:56.601468"], ["username", "nedra"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.682307"], ["email", "mabel@hilllzboncak.org"], ["password_digest", "$2a$10$.LU4qvf2jVy5jv3/i1xq7OwtHCVVpAJ/CIfHtzWMp8LGJ3DjDhxQK"], ["updated_at", "2014-06-27 19:56:56.682307"], ["username", "karolann.williamson"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.760615"], ["email", "fanny@grant.name"], ["password_digest", "$2a$10$d7y1SC8wFci0ALWvi3tO3eU3JgcVD8Y9z/qAWZ8gRBM3KtwP13/mG"], ["updated_at", "2014-06-27 19:56:56.760615"], ["username", "patience_predovic"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.795716"], ["title", "Arrays"], ["updated_at", "2014-06-27 19:56:56.795716"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.799014"], ["title", "Hashes"], ["updated_at", "2014-06-27 19:56:56.799014"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.800638"], ["title", "OOP"], ["updated_at", "2014-06-27 19:56:56.800638"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.802175"], ["title", "Parsing"], ["updated_at", "2014-06-27 19:56:56.802175"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.803690"], ["title", "API"], ["updated_at", "2014-06-27 19:56:56.803690"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.805219"], ["title", "methods"], ["updated_at", "2014-06-27 19:56:56.805219"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.806608"], ["title", "recursion"], ["updated_at", "2014-06-27 19:56:56.806608"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.808681"], ["title", "Sinatra"], ["updated_at", "2014-06-27 19:56:56.808681"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 19:56:56.810389"], ["title", "iteration"], ["updated_at", "2014-06-27 19:56:56.810389"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 19:56:56.811893"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 19:56:56.811893"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 7], ["content", "Hic delectus aut. Sed et reiciendis sint eum facere. Voluptatem quam exercitationem maiores veritatis rerum. Qui expedita facere debitis minus qui ut."], ["created_at", "2014-06-27 19:56:56.972004"], ["title", "atque"], ["updated_at", "2014-06-27 19:56:56.972004"], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (20.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:11.949548"], ["email", "jane@okeefe.org"], ["password_digest", "$2a$10$uTt7mwVzrNx6vg9fcQ821eU9YkP7oUsiwu8fpYAlGEN.7nqXqUrXG"], ["updated_at", "2014-06-27 20:09:11.949548"], ["username", "chase_champlin"]]
+  [1m[35m (32.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.097410"], ["email", "katlyn@bayermraz.name"], ["password_digest", "$2a$10$jRHArNX5LCYyYw7i0w9HJ.YXxUMEP7Bdqzfua9EFbYkqePX9aG9He"], ["updated_at", "2014-06-27 20:09:12.097410"], ["username", "carmella_runolfsdottir"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.175171"], ["email", "raul.mcdermott@kuvalishoppe.info"], ["password_digest", "$2a$10$bxGEvEg/TEFJAzkHNUz9kua15LCGod2kZBSbRZ0rSlS6Z38MuTDxm"], ["updated_at", "2014-06-27 20:09:12.175171"], ["username", "skyla"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.254035"], ["email", "emmanuelle@koelpinnikolaus.name"], ["password_digest", "$2a$10$OG6zyZp07793UOiuPs/j7eiC5EL0hNAviZKeYyqbu4vHOO08bOcv."], ["updated_at", "2014-06-27 20:09:12.254035"], ["username", "damon"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.331734"], ["email", "alta_ohara@franecki.info"], ["password_digest", "$2a$10$ikwwFzurkaPLqWgD8v7H6urra97DMFzJqzjs2G5RkycZFRpnuUb0a"], ["updated_at", "2014-06-27 20:09:12.331734"], ["username", "frida"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.412746"], ["email", "kiera@price.net"], ["password_digest", "$2a$10$odcw/5FLcNVY.cpEKLXlJ..XZ6LD7NLpanhP2E7oiae/XdBfsmsGC"], ["updated_at", "2014-06-27 20:09:12.412746"], ["username", "demarco_leffler"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.490110"], ["email", "jonathon_mcclure@leuschke.biz"], ["password_digest", "$2a$10$9IlQCq7cdJJP5yBiUbl9i.SQR0c/0uJMdoXLfBELnTqr.R7RNlYoa"], ["updated_at", "2014-06-27 20:09:12.490110"], ["username", "francisco"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.567422"], ["email", "ambrose.walsh@metz.name"], ["password_digest", "$2a$10$/AeTHAf3jhN9N3vCiXfBAeiqhJsunX6IaotBFM9NmuLbJbn4LLmAu"], ["updated_at", "2014-06-27 20:09:12.567422"], ["username", "vivianne"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.644768"], ["email", "nova@oconnell.net"], ["password_digest", "$2a$10$61d6XLTy/9sjLkDMbTy3m.DUVdcg9HyW6TvGrGbeuX5QiSCs5AFTm"], ["updated_at", "2014-06-27 20:09:12.644768"], ["username", "alyon_bayer"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.722446"], ["email", "sedrick.stanton@murray.org"], ["password_digest", "$2a$10$.rT9E8XN7uuZQdJ7VnBpBuLyL4BI8odDThfu8GyjuAxnFffbLYC6G"], ["updated_at", "2014-06-27 20:09:12.722446"], ["username", "hosea"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.806202"], ["email", "zoey.schuster@oreillywelch.com"], ["password_digest", "$2a$10$MzuGIlSZGKldm05kb5jl3OavW23vOPmDUDunruKCAUv6bTuTZep2u"], ["updated_at", "2014-06-27 20:09:12.806202"], ["username", "eliezer"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:12.883696"], ["email", "onie@barrows.net"], ["password_digest", "$2a$10$4fiK65EilZNe3qrxAQOVOuRjoTRNRsXbz3Pyt8YJiNm0AdY/Aix/O"], ["updated_at", "2014-06-27 20:09:12.883696"], ["username", "hiram.rau"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:12.961549"], ["email", "misty@gibson.org"], ["password_digest", "$2a$10$y9q4cm5.DSIYrRWBc0fwau3ahtLRjmOG4tGuDlqtW.8T3x5.MmI3i"], ["updated_at", "2014-06-27 20:09:12.961549"], ["username", "hailee"]]
+  [1m[35m (16.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.058670"], ["email", "mina@pouroshoeger.info"], ["password_digest", "$2a$10$BRNJNebFAHsCxYx7IvDIb.zu7vPmrM1ZfS32MWjbBZbE9fjeOaUN6"], ["updated_at", "2014-06-27 20:09:13.058670"], ["username", "libby.schaefer"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.136187"], ["email", "dylan_goodwin@waters.name"], ["password_digest", "$2a$10$5Xljj7DTmmTbJ64F2S4/xuCpKZcSPNGNGiAH/g3QY5TPQAoq3ki4."], ["updated_at", "2014-06-27 20:09:13.136187"], ["username", "unique"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.216556"], ["email", "shawna_bayer@sanford.com"], ["password_digest", "$2a$10$F0ptkd8TnoC1bbtCoSOIk.jnl8P6FXtnAELUusglXNkJe21MqSOe6"], ["updated_at", "2014-06-27 20:09:13.216556"], ["username", "albina"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.294124"], ["email", "alycia.langworth@ryanmccullough.name"], ["password_digest", "$2a$10$YdRgbIzNcTqq/DsKSTteUea344PZcc0c8ym93QRDrVrXfrShQRHoi"], ["updated_at", "2014-06-27 20:09:13.294124"], ["username", "micah_langworth"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.371778"], ["email", "gerry_nader@fahey.info"], ["password_digest", "$2a$10$PfmmmSctnWvcIG9o5tZ8tetBmUJr4/pO.WQMpH/bWFkQeWABNwCZ6"], ["updated_at", "2014-06-27 20:09:13.371778"], ["username", "jakayla"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.449369"], ["email", "lurline_bayer@heathcote.org"], ["password_digest", "$2a$10$1zHtKPvsACuMHLhjG4Ory.xqHrfc39uYHuHUOrV0gvY/pfQfHxdIy"], ["updated_at", "2014-06-27 20:09:13.449369"], ["username", "geo"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.530100"], ["email", "niko_graham@barrowsondricka.biz"], ["password_digest", "$2a$10$4AksWdYwvOOA5IRleNfeZubn6BAJ9kcrcX8hVpmAAmO8RvS3YNY6q"], ["updated_at", "2014-06-27 20:09:13.530100"], ["username", "jazmyne_schneider"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.561460"], ["title", "Arrays"], ["updated_at", "2014-06-27 20:09:13.561460"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.564291"], ["title", "Hashes"], ["updated_at", "2014-06-27 20:09:13.564291"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.566099"], ["title", "OOP"], ["updated_at", "2014-06-27 20:09:13.566099"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.567693"], ["title", "Parsing"], ["updated_at", "2014-06-27 20:09:13.567693"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.569216"], ["title", "API"], ["updated_at", "2014-06-27 20:09:13.569216"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.570729"], ["title", "methods"], ["updated_at", "2014-06-27 20:09:13.570729"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.572248"], ["title", "recursion"], ["updated_at", "2014-06-27 20:09:13.572248"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.573740"], ["title", "Sinatra"], ["updated_at", "2014-06-27 20:09:13.573740"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-27 20:09:13.575237"], ["title", "iteration"], ["updated_at", "2014-06-27 20:09:13.575237"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-27 20:09:13.576727"], ["title", "Nokogiri"], ["updated_at", "2014-06-27 20:09:13.576727"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("category_id", "content", "created_at", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category_id", 3], ["content", "Ut iure omnis. Dolorum voluptatem eveniet in rem. Illo voluptas molestiae ex eos. Impedit autem dolorum. Hic non quisquam."], ["created_at", "2014-06-27 20:09:13.766435"], ["title", "et"], ["updated_at", "2014-06-27 20:09:13.766435"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

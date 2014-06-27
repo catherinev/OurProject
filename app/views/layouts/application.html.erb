@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DBCoverflow</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header>
+
+		<nav>
+			<h1>DBC OverFlow</h1>
+				<ul>
+					<li><%= form_tag searches_index_path, :method => 'get' do %>
+  					<%= label_tag :query %>
+  					<%= text_field_tag :q, params[:q] %>
+  					<%= submit_tag :search %>
+					<% end %>
+				</li>
+					<%if current_user %>
+						<li class="nav_link"><%= link_to "Add Question", new_question_path %></li>
+						<li class="nav_link"><%= link_to "Profile", user_path(current_user) %></li>
+						<li class="nav_link"><%= link_to "Logout", session_path(current_user), method: "delete" %></li>
+					<%else%>
+						<li class="nav_link"><%= link_to "Login", new_session_path %></li>
+						<li class="nav_link"><%= link_to "Create Account", new_user_path %></li>
+					<%end%>
+					<li class="nav_link"><%= link_to "Home", questions_path %></li>
+					<li class="nav_link"><%= link_to "Browse", categories_path %></li>
+				</ul>
+		</nav>
+
+	</header>
+
+	<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div id="category_listed">
+
+	<h1><%=@category.title%></h1>
+	<ul>
+	  <% @questions.each do |question| %>
+	  <li> <%= link_to question.title, question_path(question)%></li>
+	  <%end%>
+
+	</ul>
+</div>
