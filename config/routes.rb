@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
 
+  
 
+  resources :searches, only: [:index]
   resources :users, except: [:destroy, :index]
   resources :questions do
     resources :comments, only: [:create]
