@@ -1,5 +1,5 @@
 <h2>This is your profile</h2>
-
+<%= gravatar_for @user %>
 <p>Username: <%= current_user.username %></p>
 <p>Email: <%= current_user.email %></p>
 <p><%= link_to "Edit Profile", edit_user_path(current_user) %></p>

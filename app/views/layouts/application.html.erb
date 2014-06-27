@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(41.890019, -87.637689),
+          zoom: 19,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   <title>DBCoverflow</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
