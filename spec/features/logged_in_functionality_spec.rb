@@ -63,3 +63,111 @@ feature 'User browsing the website'  do
   end
 end
 
+feature 'User can answer a question' do
+  context 'on question page' do
+
+    it 'should show answers content on the current question page' do
+
+      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      page.set_rack_session(:user_id => @user.id)
+      visit question_path(question.id)
+      within('.answerform') do
+        fill_in 'Content', with: "this is my content"
+      end
+        click_button('Add Answer')
+      expect(page).to have_content('this is my content')
+    end
+  end
+end
+
+feature 'User can edit their question' do
+  context 'on question page' do
+
+    it 'should change the content of the question after editing.' do
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      question = Question.create(title: "BlahBlah", content: "Main question", user_id: @user.id, category_id: 1)
+     
+      page.set_rack_session(:user_id => @user.id)
+      visit question_path(question.id)
+
+      within('#edit_link_for_question') do
+        click_link('Edit')
+      end
+      within(".edit_question") do
+        fill_in 'Content', with: "This is the changed content"
+      end
+      click_button('Update Question')
+      expect(page).to have_content('This is the changed content')
+    end
+  end
+end
+
+feature 'User can edit their answer' do
+  context 'on question page' do
+
+    xit 'should change the content of their answer on page.' do
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      question = Question.create(title: "BlahBlah", content: "Main question", user_id: @user.id, category_id: 1)
+      answer = Answer.create(content: "Fibonacci", user_id: @user.id, question_id: question.id )
+     
+      page.set_rack_session(:user_id => @user.id)
+      visit question_path(question.id)
+
+      within('#edit_answer') do
+        click_link('Edit')
+      end
+      within(".edit_answer") do
+        fill_in 'Content', with: "not Fibonacci."
+      end
+      click_button('Update Answer')
+      expect(page).to have_content('not Fibonacci')
+    end
+  end
+end
+
+feature 'User can comment on a question' do
+  context 'on question page' do
+
+    xit 'should show a comment for question' do
+      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      page.set_rack_session(:user_id => @user.id)
+
+      visit question_path(question.id)
+      within('#question_comment') do
+        click_button('Comment')
+      end
+      within('#add_comment_to_question') do
+        fill_in 'Content', with: "This is a really nice question. Thanks for asking."
+      end
+      click_button('Comment')
+      expect(page).to have_content('This is a really nice question. Thanks for asking.')
+    end
+  end
+end
+
+feature 'User can comment on an answer' do
+  context 'on question page' do
+
+    xit 'should show a comment on an answer for question' do
+      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
+      answer = Answer.create(content: "API",user_id: @user.id ,question_id: question.id )
+      page.set_rack_session(:user_id => @user.id)
+
+      visit question_path(question.id)
+      within('#comment_on_answer') do
+        click_button('Comment')
+      end
+      within('#add_comment_to_answer') do
+        fill_in 'Content', with: "This answer is incorrect!"
+      end
+      click_button('Comment')
+      expect(page).to have_content('This answer is incorrect!')
+    end
+  end
+end
+
+
+

@@ -1,7 +1,7 @@
 <h1><%=@question.title%></h1>
 <p><%=@question.content%></p>
 <% if current_user && @question.user_id == current_user.id %>
-  <%= link_to "Edit", edit_question_path(@question)%>
+  <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
 <%end%>
 
  <%=form_for :comment, html: {class: "commentform", id: "#{@question.id}"} do |f|%>
