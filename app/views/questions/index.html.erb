@@ -1,7 +1,10 @@
 
 <ul>
+
   <% @questions.each do |question|%>
-    <li><%= link_to question.title, question_path(question) %>
+	  <div class="question_index">
+	    <li class="q_title"><%= link_to question.title, question_path(question) %></li><br><p><%= link_to question.content, question_path(question) %></p>
+	  </div>
   <%end%>
 </ul>
 

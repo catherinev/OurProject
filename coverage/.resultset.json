@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/environment.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/application.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/application.rb": [
         1,
         null,
         1,
@@ -33,13 +33,13 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/boot.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/boot.rb": [
         null,
         1,
         null,
         1
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/environments/test.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/environments/test.rb": [
         1,
         null,
         null,
@@ -80,7 +80,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/backtrace_silencers.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -89,18 +89,18 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/cookies_serializer.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/filter_parameter_logging.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/inflections.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -118,18 +118,18 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/mime_types.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/session_store.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/initializers/wrap_parameters.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -145,7 +145,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/config/routes.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/config/routes.rb": [
         1,
         null,
         null,
@@ -166,6 +166,7 @@
         null,
         null,
         null,
+        null,
         1,
         null,
         null,
@@ -211,6 +212,236 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/helpers/answers_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/helpers/categories_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/helpers/questions_helper.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/helpers/sessions_helper.rb": [
+        1,
+        1,
+        93,
+        45,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/answers_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/spec/features/answer_spec.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/monicacho/Desktop/test/OurProject/spec/features/logged_in_functionality_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
         null,
         null,
         null,
@@ -218,57 +449,10 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/helpers/answers_helper.rb": [
-        1,
+      "/Users/monicacho/Desktop/test/OurProject/spec/features/login_and_out_spec.rb": [
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/helpers/categories_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/helpers/questions_helper.rb": [
-        1,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/helpers/sessions_helper.rb": [
-        1,
-        1,
-        25,
-        13,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/answers_controller.rb": [
-        1,
-        1,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/features/logged_in_functionality_spec.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/spec/features/not_logged_in_functionality_spec.rb": [
         1,
         null,
         1,
@@ -279,8 +463,6 @@
         1,
         null,
         null,
-        1,
-        1,
         1,
         1,
         1,
@@ -306,12 +488,7 @@
         1,
         1,
         1,
-        1,
-        1,
         null,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -321,13 +498,29 @@
         null,
         1,
         1,
-        1,
-        1,
-        1,
+        5,
+        5,
+        5,
+        5,
+        null,
+        null,
         1,
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         null,
@@ -335,80 +528,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/features/login_and_out_spec.rb": [
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/features/not_logged_in_functionality_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        4,
-        4,
-        4,
-        4,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/models/answer_spec.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/spec/models/answer_spec.rb": [
         1,
         null,
         1,
@@ -438,7 +558,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/models/answer.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/models/answer.rb": [
         1,
         1,
         1,
@@ -449,7 +569,7 @@
         1,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/models/question_spec.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/spec/models/question_spec.rb": [
         1,
         null,
         1,
@@ -470,7 +590,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/models/question.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/models/question.rb": [
         1,
         1,
         1,
@@ -480,34 +600,22 @@
         1,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/questions_controller.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/questions_controller.rb": [
         1,
         1,
         1,
-        13,
+        14,
         null,
         null,
         1,
-        7,
-        7,
-        7,
+        11,
+        11,
+        11,
         null,
         null,
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        null,
-        null,
-        null,
         null,
         null,
         1,
@@ -515,15 +623,27 @@
         0,
         0,
         0,
+        null,
         0,
+        null,
+        null,
         null,
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         0,
         null,
@@ -531,7 +651,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/models/user.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/models/user.rb": [
         1,
         null,
         null,
@@ -543,13 +663,13 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/models/comment.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/models/comment.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/categories_controller.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/categories_controller.rb": [
         1,
         1,
         2,
@@ -561,13 +681,13 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/models/category.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/models/category.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/sessions_controller.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/sessions_controller.rb": [
         null,
         1,
         null,
@@ -589,7 +709,7 @@
         null,
         null
       ],
-      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/app/controllers/users_controller.rb": [
+      "/Users/monicacho/Desktop/test/OurProject/app/controllers/users_controller.rb": [
         null,
         1,
         1,
@@ -644,6 +764,6 @@
         null
       ]
     },
-    "timestamp": 1403823751
+    "timestamp": 1403879207
   }
 }

@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   include QuestionsHelper
   def index
-    @questions = Question.all
+    @questions = Question.order("created_at DESC").limit(12)
   end
 
   def show

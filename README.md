@@ -1,4 +1,4 @@
-DBCoverflow
+DBCoverflow ![alt text](https://travis-ci.org/catherinev/OurProject.svg?branch=master)
 ===========
 ## Overview
 
@@ -14,11 +14,17 @@ Check out [DBCoverflow](http://dbc-overflow-ckmr.herokuapp.com/)! Check out some
 
 DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com/login). 
 
+To get it running on a local host, create and migrate and seed regularily. 
+
 ## Testing
+
+Before testing, make sure to bundle and then run 'rake db:test:prepare'.
 
 All of our tests are written in RSpec, not Rails' standard Test suite. Note that we are using the ['shoulda'](https://github.com/thoughtbot/shoulda) gem in many of our model and controller tests, as well as ['capybara'](https://github.com/jnicklas/capybara) for our feature/integration tests. Much of the app's functionality is determined by whether a user is logged in or not.
 
 We use [Travis](http://docs.travis-ci.com/) for continuous integration testing, and [SimpleCov](https://github.com/colszowka/simplecov) for test coverage reporting.
+
+
 
 
 ## Agile Development
