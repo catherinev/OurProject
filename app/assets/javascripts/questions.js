@@ -25,7 +25,6 @@ $(document).ready( function(){
     var question_id = $(this).attr('id');
     var url =  '/questions/' + question_id +'/answers';
     $.post(url, data, function(response){
-      console.log(response);
       $('.answerform')[0].reset();
       $('.answerform').hide();
       $('.addAnswer').show();
@@ -39,7 +38,7 @@ $(document).ready( function(){
   $('.commentform').on('submit', function(event){
     event.preventDefault();
     var data = $(this).serialize();
-    var question_id = $(this).attr('id');
+    var question_id = $(this).attr('id').substr(1);
     var url =  '/questions/' + question_id +'/comments';
     $.post(url, data, function(response){
       $('.commentform')[0].reset();

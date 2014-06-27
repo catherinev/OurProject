@@ -1,11 +1,9 @@
 <div id="category_listed">
 
-<h1>Categories</h1>
-<ul>
-	
-  <% @categories.each do |category| %>
-  <li> <%= link_to category.title, category_path(category)%></li>
-  <%end%>
-
-</ul>
+<h1>Click on a Category</h1>
+	<ul>
+	  <% @categories.each do |category| %>
+	  <li> <%= link_to category.title, category_path(category)%></li>
+	  <%end%>
+	</ul>
 </div>
