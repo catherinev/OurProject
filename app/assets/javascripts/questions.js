@@ -12,6 +12,12 @@ $(document).ready( function(){
     $('.commentform').show();
     $('.addComment').hide();
   });
+  $('.addAnswerComment').on("click",function(event){
+    event.preventDefault();
+    console.log($(this).data('form-id'))
+    $('#'+$(this).data('form-id') + '.answercommentform').show();
+    $('.addAnswerComment').hide();
+  });
   $('.answerform').on('submit', function(event){
     event.preventDefault();
     var data = $(this).serialize();
@@ -36,7 +42,6 @@ $(document).ready( function(){
     var question_id = $(this).attr('id');
     var url =  '/questions/' + question_id +'/comments';
     $.post(url, data, function(response){
-      console.log(response);
       $('.commentform')[0].reset();
       $('.commentform').hide();
       $('.addComment').show();
@@ -47,4 +52,18 @@ $(document).ready( function(){
   });
 
   });
+  $('.answercommentform').on('submit', function(event){
+      event.preventDefault();
+      var data = $(this).serialize();
+      var url = $(this).context.action;
+      var that = this
+      $.post(url,data,function(response){
+        $(that)[0].reset();
+      $('.answercommentform').hide();
+      $('.addAnswerComment').show();
+      console.log($(that).next());
+      $(that).next().prepend(response);
+      })
+  })
+
 });

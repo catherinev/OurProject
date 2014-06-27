@@ -9,8 +9,8 @@ class CommentsController < ApplicationController
     else
       @comment = Comment.new(comment_params)
       @comment.user = current_user
-      @answer = Answer.find(params[:question_id])
-      @Answer.comments << @comment
+      @answer = Answer.find(params[:answer_id])
+      @answer.comments << @comment
       render partial: 'comment', locals: {comment: @comment}, layout: false
     end
   end

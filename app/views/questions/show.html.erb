@@ -34,15 +34,15 @@
 <% @answers.each do |answer| %>
  <%=render answer, answer: answer, layout: false%>
  <%if current_user%>
-<button class= 'addAnswerComment'>Add Comment</button>
-<%end%>
-  <%=form_for :comment, html: {class: "answercommentform", id: "#{@question.id}"} do |f|%>
+  <% form_id = "C#{answer.id}" %>
+  <button class= 'addAnswerComment' data-form-id="<%= form_id %>">Add Comment</button>
+  <%=form_for [answer, Comment.new], html: {class: "answercommentform", id: form_id} do |f|%>
     <%=f.label :content%>
     <%=f.text_area :content%>
     <%=f.submit "Post Comment"%>
     <%end%>
-<ul>
-  <ul class="answercomments">
+<%end%>
+  <ul class="<%=answer.id%>answercomments">
 <% answer.comments.each do |comment| %>
  <%= render comment %>
 <%end%>
