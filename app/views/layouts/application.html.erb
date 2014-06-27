@@ -14,7 +14,6 @@
 			<h1>DBC OverFlow</h1>
 				<ul>
 					<li><%= form_tag searches_path, :method => 'get' do %>
-  					<%= label_tag :query %>
   					<%= text_field_tag :q, params[:q] %>
   					<%= submit_tag :search %>
 					<% end %>
