@@ -159,3 +159,55 @@ form{
 	margin-bottom: 10px;
 	border-radius: 0.75em;
 }
+
+.question_div{
+	border-bottom: dotted black 1px;
+
+}
+
+.answer_div{
+	padding:15px;
+}
+
+.posted_by{
+	list-style: none;
+	border-bottom: dotted black 1px;
+	font-style: italic;
+}
+
+
+#answer_form{
+	border: dotted lightgrey 1px;
+	padding: 12px;
+	border-radius: .75em;
+}
+
+#new_question{
+
+	margin:20px auto;
+	width: 600px;
+}
+
+.new_question{
+	
+	margin:30px auto;
+	width: 600px;
+
+}
+
+#edit_question_form{
+	margin:20px auto;
+}
+
+.header_for_edit_form{
+	text-align: center;
+}
+
+#profile{
+	margin: 30px auto;
+	width: 500px;
+	border: dotted grey 1px;
+	padding: 12px;
+	border-radius: .75em;
+
+}

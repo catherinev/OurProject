@@ -1,13 +1,16 @@
 <div id="question_show_page_container">
 
-
-<h1><%=@question.title%></h1>
-  <p><%=@question.content%></p>
-  <% if current_user && @question.user_id == current_user.id %>
-    <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
-  <%end%>
+<div class="question_div">
+  <h1><%=@question.title%></h1>
+    <p><%=@question.content%></p>
+    <% if current_user && @question.user_id == current_user.id %>
+      <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
+    <%end%>
+</div>
 
 <h2>Comments</h2>
+
+
 
 <%=form_for :comment, html: {class: "commentform", id: "Q#{@question.id}"} do |f|%>
     <%=f.label :content%>
@@ -19,6 +22,8 @@
   <button class= 'addComment'>Add Comment</button>
 <%end%>
 
+<%if @question.comments.any? %>
+
 <ul class="comments">
   <% @question.comments.each do |comment| %>
   <div class="comments_each">
@@ -27,7 +32,11 @@
   <%end%>
 </ul>
 
+<%else%>
+<p>-Currently there are no questions added. </p>
+<%end%>
 
+<div id="answer_form">
 <h2>Answers</h2>
   <%=form_for :answer, html: {class: "answerform", id: "#{@question.id}"} do |f|%>
     <%=f.label :content%>
@@ -38,7 +47,13 @@
   <button class= 'addAnswer'>Add Answer</button>
 <%end%>
 
+
   <ul class="answers">
+
+    <%if @answers.empty? %>
+    <p>-There are currently no answers to this question</p>
+    <%end%>
+
   <% @answers.each do |answer| %>
    <%=render answer, answer: answer, layout: false%>
    <%if current_user%>

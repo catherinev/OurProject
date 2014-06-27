@@ -1,9 +1,13 @@
-<h2>This is your profile</h2>
-
-<p>Username: <%= current_user.username %></p>
-<p>Email: <%= current_user.email %></p>
-<p><%= link_to "Edit Profile", edit_user_path(current_user) %></p>
-<br>
-<p>Once questions and answers are done, render partial for questions here.</p>
+<div id="profile">
 
 
+	<h2>This is your profile</h2>
+
+		<p>Username: <%= current_user.username %></p>
+		<p>Email: <%= current_user.email %></p>
+		<p><%= link_to "Edit Profile", edit_user_path(current_user) %></p>
+		<br>
+		<p>Once questions and answers are done, render partial for questions here.</p>
+
+
+</div>
