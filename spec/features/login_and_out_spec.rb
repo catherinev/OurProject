@@ -1,4 +1,5 @@
 require 'spec_helper'
+include SessionsHelper
 
 feature 'User logging in' do
 	context 'on questions#show' do
@@ -16,7 +17,7 @@ feature 'User logging in' do
 	end
 
 	context "on new_session_url page" do
-		it "should create a user session upon successful login" do
+		it "should create a user session upon successful login redirection" do
 			@user = User.create(username: "hotcakes", email: "hotcakes@example.com", password: "notcake", password_confirmation: "notcake")
 
 			visit new_session_url
@@ -27,6 +28,7 @@ feature 'User logging in' do
 			click_button('Sign In')
 			expect(page).to have_content("Add Question")
 			expect(current_url).to eq questions_url
+			expect{session[:user_id]}.to_not be nil
 		end
 	end
 
