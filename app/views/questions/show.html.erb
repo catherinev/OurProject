@@ -3,11 +3,21 @@
 <% if current_user && @question.user_id == current_user.id %>
   <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
 <%end%>
-<% @comments.each do|comment| %>
-  <%=comment.content%> <strong><%=comment.user.username%></strong>
-  <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%>
 
+ <%=form_for :comment, html: {class: "commentform", id: "#{@question.id}"} do |f|%>
+    <%=f.label :content%>
+    <%=f.text_area :content%>
+    <%=f.submit "Post Comment"%>
+  <%end%>
+<%if current_user%>
+<button class= 'addComment'>Add Comment</button>
 <%end%>
+
+<ul class="comments">
+<% @question.comments.each do |comment| %>
+ <%= render comment %>
+<%end%>
+</ul>
 
 
 <h2>Answers</h2>
@@ -23,6 +33,21 @@
 <ul class="answers">
 <% @answers.each do |answer| %>
  <%=render answer, answer: answer, layout: false%>
+ <%if current_user%>
+  <% form_id = "C#{answer.id}" %>
+  <button class= 'addAnswerComment' data-form-id="<%= form_id %>">Add Comment</button>
+  <%=form_for [answer, Comment.new], html: {class: "answercommentform", id: form_id} do |f|%>
+    <%=f.label :content%>
+    <%=f.text_area :content%>
+    <%=f.submit "Post Comment"%>
+    <%end%>
+<%end%>
+  <ul class="<%=answer.id%>answercomments">
+<% answer.comments.each do |comment| %>
+ <%= render comment %>
+<%end%>
+</ul>
+</ul>
 <%end%>
 </ul>
 
