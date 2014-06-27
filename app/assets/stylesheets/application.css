@@ -2,7 +2,11 @@
 	color: red;
 
 }
-
+ #map_canvas {
+        margin: auto;
+        width: 500px;
+        height: 400px;
+      }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
 	def show
 		if current_user == User.find(params[:id])
+			@user = current_user
 			@questions = current_user.questions
 			render 'show'
 		else
@@ -41,7 +42,7 @@ class UsersController < ApplicationController
 			redirect_to user_path(current_user)
 		else
 			not_found
-		end	
+		end
 	end
 
 	private
