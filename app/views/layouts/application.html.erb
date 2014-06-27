@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>DBCoverflow</title>
+  <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -11,12 +12,11 @@
 	<header>
       <span class="dbcoverflow"><a id="title" href="/">DBC OverFlow</a></span>
 		<nav>
-			
 				<ul>
 					<%if current_user %>
 						<li class="nav_link"><%= link_to "Add Question", new_question_path %></li>
 						<li class="nav_link"><%= link_to "Profile", user_path(current_user) %></li>
-						<li class="nav_link"><%= link_to "Logout", session_path(current_user), method: "delete" %></li>
+						<li class="nav_link"><%= link_to "Logout", session_path(current_user), data: { confirm: "Are you sure?" }, method: "delete" %></li>
 					<%else%>
 						<li class="nav_link"><%= link_to "Login", new_session_path %></li>
 						<li class="nav_link"><%= link_to "Create Account", new_user_path %></li>

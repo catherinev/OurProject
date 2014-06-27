@@ -1,13 +1,20 @@
 <div id="profile">
 
 
-	<h2>This is your profile</h2>
+	<h1><%=current_user.username%></h1>
 
 		<p>Username: <%= current_user.username %></p>
 		<p>Email: <%= current_user.email %></p>
 		<p><%= link_to "Edit Profile", edit_user_path(current_user) %></p>
 		<br>
-		<p>Once questions and answers are done, render partial for questions here.</p>
 
+
+		<h2>Questions asked by <%=current_user.username%>:</h2>
+		<ul>
+		<%@questions.each do |question| %>
+			<li><%= link_to question.title, question_path(question) %></li>
+			<li><%= link_to question.content, question_path(question) %></li>
+		<%end%>
+		</ul>
 
 </div>
