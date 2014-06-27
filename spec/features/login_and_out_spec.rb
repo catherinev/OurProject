@@ -6,6 +6,28 @@ feature 'User logging in' do
 			visit root_url
 			expect(page).to have_content("Login")
 		end
+
+		it "should redirect to login page on click of login link" do
+			visit root_url
+			click_link("Login")
+			expect(page).to have_content("Sign In")
+			expect(current_url).to eq new_session_url
+		end
+	end
+
+	context "on new_session_url page" do
+		it "should create a user session upon successful login" do
+			@user = User.create(username: "hotcakes", email: "hotcakes@example.com", password: "notcake", password_confirmation: "notcake")
+
+			visit new_session_url
+			within('.loginform') do
+				fill_in 'Email', with: "hotcakes@example.com"
+				fill_in 'Password', with: "notcake"
+			end
+			click_button('Sign In')
+			expect(page).to have_content("Add Question")
+			expect(current_url).to eq questions_url
+		end
 	end
 
 end
