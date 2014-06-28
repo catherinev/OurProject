@@ -1,17 +1,21 @@
-<%=form_for @question do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %><br>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %><br>
+<div class="new_question">
+	
+	<%=form_for @question do |f| %>
+	  <%= f.label :title %>
+	  <%= f.text_field :title %><br>
 
-  <%= f.label :category_id %>
-  <%=f.collection_select :category_id, @categories.order(:title), :id, :title %>
+	  <%= f.label :content %>
+	  <%= f.text_area :content %><br>
 
-  <%=f.submit %>
+	  <%= f.label :category_id %>
+	  <%=f.collection_select :category_id, @categories.order(:title), :id, :title %>
+
+	  <%=f.submit %>
 
 
 
 
-<%end%>
+	<%end%>
+</div>
 

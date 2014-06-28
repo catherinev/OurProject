@@ -135,14 +135,14 @@ feature 'User can comment on a question' do
       page.set_rack_session(:user_id => @user.id)
 
       visit question_path(question.id)
-      within('#question_comment') do
-        click_button('Comment')
+
+        click_button('Add Comment')
+
+      within('.commentform') do
+        fill_in 'Content', with: "nice post."
       end
-      within('#add_comment_to_question') do
-        fill_in 'Content', with: "This is a really nice question. Thanks for asking."
-      end
-      click_button('Comment')
-      expect(page).to have_content('This is a really nice question. Thanks for asking.')
+      click_button('Post Comment')
+      expect(page).to have_content("nice post.")
     end
   end
 end

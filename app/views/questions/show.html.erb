@@ -1,57 +1,84 @@
-<h1><%=@question.title%></h1>
-<p><%=@question.content%></p>
-<% if current_user && @question.user_id == current_user.id %>
-  <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
-<%end%>
+<div id="question_show_page_container">
 
- <%=form_for :comment, html: {class: "commentform", id: "#{@question.id}"} do |f|%>
+<div class="question_div">
+  <h1><%=@question.title%></h1>
+    <p><%=@question.content%></p>
+    <% if current_user && @question.user_id == current_user.id %>
+      <p id="edit_link_for_question"><%= link_to "Edit", edit_question_path(@question)%></p>
+    <%end%>
+</div>
+
+<h2>Comments</h2>
+
+
+
+<%=form_for :comment, html: {class: "commentform", id: "Q#{@question.id}"} do |f|%>
     <%=f.label :content%>
     <%=f.text_area :content%>
     <%=f.submit "Post Comment"%>
   <%end%>
+
 <%if current_user%>
-<button class= 'addComment'>Add Comment</button>
+  <button class= 'addComment'>Add Comment</button>
 <%end%>
+
+<%if @question.comments.any? %>
 
 <ul class="comments">
-<% @question.comments.each do |comment| %>
- <%= render comment %>
-<%end%>
+  <% @question.comments.each do |comment| %>
+  <div class="comments_each">
+    <%= render comment %>
+  </div>
+  <%end%>
 </ul>
 
+<%else%>
+<p>-Currently there are no questions added. </p>
+<%end%>
 
+<div id="answer_form">
 <h2>Answers</h2>
-
   <%=form_for :answer, html: {class: "answerform", id: "#{@question.id}"} do |f|%>
     <%=f.label :content%>
     <%=f.text_area :content%>
     <%=f.submit "Post Answer"%>
   <%end%>
 <%if current_user%>
-<button class= 'addAnswer'>Add Answer</button>
+  <button class= 'addAnswer'>Add Answer</button>
 <%end%>
-<ul class="answers">
-<% @answers.each do |answer| %>
- <%=render answer, answer: answer, layout: false%>
- <%if current_user%>
-  <% form_id = "C#{answer.id}" %>
-  <button class= 'addAnswerComment' data-form-id="<%= form_id %>">Add Comment</button>
-  <%=form_for [answer, Comment.new], html: {class: "answercommentform", id: form_id} do |f|%>
-    <%=f.label :content%>
-    <%=f.text_area :content%>
-    <%=f.submit "Post Comment"%>
+
+
+  <ul class="answers">
+
+    <%if @answers.empty? %>
+    <p>-There are currently no answers to this question</p>
     <%end%>
-<%end%>
-  <ul class="<%=answer.id%>answercomments">
-<% answer.comments.each do |comment| %>
- <%= render comment %>
-<%end%>
-</ul>
-</ul>
-<%end%>
+
+  <% @answers.each do |answer| %>
+   <%=render answer, answer: answer, layout: false%>
+   <%if current_user%>
+    <% form_id = "C#{answer.id}" %>
+    <button class= 'addAnswerComment' data-form-id="<%= form_id %>">Add Comment</button>
+    <%=form_for [answer, Comment.new], html: {class: "answercommentform", id: form_id} do |f|%>
+      <%=f.label :content%>
+      <%=f.text_area :content%>
+      <%=f.submit "Post Comment"%>
+    <%end%>
+  <%end%>
+    <ul class="<%=answer.id%>answercomments">
+      <% answer.comments.each do |comment| %>
+      <div class="comments_each">
+        <%= render comment %>
+      </div>
+      <%end%>
+    </ul>
+  </ul>
+  <%end%>
 </ul>
 
 
 <% if flash[:notice]%>
   <div class="notice"><%=flash[:notice]%></div>
 <%end%>
+
+</div>
