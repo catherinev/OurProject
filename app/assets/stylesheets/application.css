@@ -23,6 +23,19 @@
  *= require_self
  */
 
+ #container{
+ 	background-color: rgba(250,250,250,98.4);
+ 	background: transparent;
+ 	/*background-color: grey;*/
+ 	width:80%;
+ 	margin-right: auto;
+ 	margin-left:auto;
+
+
+
+
+ }
+
  .gravatar{
  	width:30%;
  	height:30%;
@@ -69,6 +82,7 @@ nav{
 	width: 100%;
 	height: 80px;
 	background-color: black;
+
 }
 
 
@@ -125,14 +139,31 @@ form{
 	width:70%;
 	margin: 0px auto;
 	border-bottom: dotted black 1px;
+
+}
+
+#front_page_questions{
+	
 }
 .question_index a{
 	text-decoration: none;
 	color:black;
+
 }
 
 .q_title{
-	font-size: 30px;
+	font-size: 25px;
+	background-color: lightgrey;
+	border-radius: .2em;
+	border: solid darkgrey 1px; 
+	text-indent: 5px;
+
+}
+
+.q_title a{
+	color:black;
+	font-family: Arial;
+
 }
 
 #signin_form{

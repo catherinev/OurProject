@@ -26,7 +26,7 @@
       
 		<nav>
 				<ul>
-					<li id="logodbc"><div class="dbcoverflow"></div></li>
+					<li id="logodbc"><a href="/"><div class="dbcoverflow"></div></a></li>
 					<li id="search_form">
 						<%= form_tag searches_path,id:"search_form_box", :method => 'get' do %>
   					<%= text_field_tag :q, params[:q] %>
@@ -50,9 +50,11 @@
 
 
 
+
+
 	</header>
-
+<div id="container">
 	<%= yield %>
-
+</div>
 </body>
 </html>
