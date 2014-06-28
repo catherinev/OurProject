@@ -23,9 +23,10 @@
 <body>
 
 	<header>
-      <span class="dbcoverflow"><a id="title" href="/">DBC OverFlow</a></span>
+      
 		<nav>
 				<ul>
+					<li id="logodbc"><div class="dbcoverflow"></div></li>
 					<li>
 						<%= form_tag searches_path, :method => 'get' do %>
   					<%= text_field_tag :q, params[:q] %>
