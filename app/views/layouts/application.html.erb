@@ -27,8 +27,8 @@
 		<nav>
 				<ul>
 					<li id="logodbc"><div class="dbcoverflow"></div></li>
-					<li>
-						<%= form_tag searches_path, :method => 'get' do %>
+					<li id="search_form">
+						<%= form_tag searches_path,id:"search_form_box", :method => 'get' do %>
   					<%= text_field_tag :q, params[:q] %>
   					<%= submit_tag :search %>
 						<% end %>

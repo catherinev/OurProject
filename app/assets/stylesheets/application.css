@@ -23,6 +23,12 @@
  *= require_self
  */
 
+ .gravatar{
+ 	width:30%;
+ 	height:30%;
+ 	border: dotted black 1px;
+ }
+
 body{
 	margin:0px;
 	background-image: url('/assets/logo2.jpg');
@@ -47,6 +53,12 @@ nav li {
 #logodbc{
 	float:left;
 	margin-top: 10px;
+
+}
+#search_form{
+	border:none;
+	margin-top: 43px;
+
 }
 
 nav ul{
@@ -91,11 +103,16 @@ ul{
 	font-size: 25px;
 	font-family: Georgia;
 }
+#search_form_box{
+	border:none;
+	width:180px;
+}
 
 form{
-	width: 300px;
+	width: 70%;
 	border: dotted black 1px;
 	padding: 12px;
+	margin:auto;
 }
 
 #category_listed{
@@ -192,12 +209,16 @@ form{
 }
 
 #edit_form_for_profile{
-	width:40%;
+	width:30%;
 	margin:10px auto;
 
 }
 
+#edit_profile_header{
+	margin:10 auto;
+	width:200px;
 
+}
 .edit_button_profile {
 	-moz-box-shadow:inset -3px 17px 20px -4px #bee2f9;
 	-webkit-box-shadow:inset -3px 17px 20px -4px #bee2f9;

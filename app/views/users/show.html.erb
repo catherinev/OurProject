@@ -1,7 +1,7 @@
 
 <div id="profile">
 
-	<h1><%=current_user.username%></h1>
+	<h1>Hello <%=current_user.username%>!</h1>
 		<%= gravatar_for @user %>
 		<p>Username: <%= current_user.username %></p>
 		<p>Email: <%= current_user.email %></p>
