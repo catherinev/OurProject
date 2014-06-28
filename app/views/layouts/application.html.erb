@@ -26,11 +26,12 @@
       <span class="dbcoverflow"><a id="title" href="/">DBC OverFlow</a></span>
 		<nav>
 				<ul>
-					<li><%= form_tag searches_path, :method => 'get' do %>
+					<li>
+						<%= form_tag searches_path, :method => 'get' do %>
   					<%= text_field_tag :q, params[:q] %>
   					<%= submit_tag :search %>
-					<% end %>
-				</li>
+						<% end %>
+					</li>
 					<%if current_user %>
 						<li class="nav_link"><%= link_to "Add Question", new_question_path %></li>
 						<li class="nav_link"><%= link_to "Profile", user_path(current_user) %></li>
