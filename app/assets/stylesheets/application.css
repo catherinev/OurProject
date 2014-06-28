@@ -167,13 +167,13 @@ form{
 #new_question{
 
 	margin:20px auto;
-	width: 600px;
+	width: 300px;
 }
 
 .new_question{
 	
 	margin:30px auto;
-	width: 600px;
+	width: 40%;
 }
 
 #edit_question_form{
@@ -194,6 +194,11 @@ form{
 	box-shadow: inset 0 0 100px #000;
 }
 
+#edit_form_for_profile{
+	width:40%;
+	margin:10px auto;
+
+}
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
