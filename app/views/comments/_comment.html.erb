@@ -1,6 +1,6 @@
-<li>
-  <%= comment.content %>
-  <%= comment.user.username %>
-  <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%>
+<li  class="comments_each">
+	<p>Posted By: <%= comment.user.username %></p>
+  <p>Comment: <%= comment.content %>	</p>
+  <p>created at: <%=comment.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%></p>
 </li>
 

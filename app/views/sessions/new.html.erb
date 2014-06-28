@@ -1,4 +1,6 @@
-<h2>Sign In</h2>
+<div id="signin_form">
+
+<h2 id="signin">Sign In</h2>
 
 	<% if @error %>
 		<div id="error_message"><%= @error %></div><br>	
@@ -8,10 +10,12 @@
 	<%= form_for(:session, url: sessions_path, :html => {:class => "loginform"}) do |f| %>
 
 		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.text_field :email %><br>
 
 		<%= f.label :password %>
-		<%= f.password_field :password %>
+		<%= f.password_field :password %><br>
 
 		<%= f.submit "Sign In" %>
 	<% end %>
+
+</div>
