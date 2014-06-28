@@ -3,7 +3,7 @@
 
  	<p class="posted_by">Posted By: <%=answer.user.username%>
  	<span style="float: right; font-style: italic">created at: <%=answer.created_at.in_time_zone("Central Time (US & Canada)").strftime("%m/%d/%Y %I:%M%p")%></span></p>
- 	<p>Comment: <%=answer.content%></p>  
+ 	<p><%=answer.content%></p>  
  	
 
 
