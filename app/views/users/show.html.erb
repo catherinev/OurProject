@@ -1,11 +1,11 @@
 
 <div id="profile">
 
-	<h1><%=current_user.username%></h1>
+	<h1>Hello <%=current_user.username%>!</h1>
 		<%= gravatar_for @user %>
 		<p>Username: <%= current_user.username %></p>
 		<p>Email: <%= current_user.email %></p>
-		<p><%= link_to "Edit Profile", edit_user_path(current_user) %></p>
+		<p class="edit_button_profile"><%= link_to "Edit Profile", edit_user_path(current_user),id:"edit_profile" %></p>
 		<br>
 
 
