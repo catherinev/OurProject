@@ -2,6 +2,7 @@ $(document).ready( function(){
   $('.commentform').hide();
   $('.answerform').hide();
   $('.answercommentform').hide();
+
   $('.addAnswer').on("click",function(event){
     event.preventDefault();
     $('.answerform').show();
@@ -18,10 +19,10 @@ $(document).ready( function(){
     $('#'+$(this).data('form-id') + '.answercommentform').show();
     $('.addAnswerComment').hide();
   });
+
   $('.answerform').on('submit', function(event){
     event.preventDefault();
     var data = $(this).serialize();
-
     var question_id = $(this).attr('id');
     var url =  '/questions/' + question_id +'/answers';
     $.post(url, data, function(response){
@@ -39,11 +40,9 @@ $(document).ready( function(){
 
   $('.commentform').on('submit', function(event){
     event.preventDefault();
-
     var data = $(this).serialize();
     var question_id = $(this).attr('id');
     var url =  '/questions/' + question_id +'/comments';
-
     $.post(url, data, function(response){
       $('.commentform')[0].reset();
       $('.commentform').hide();
