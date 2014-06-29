@@ -27,6 +27,7 @@ nav {
 	height: 80px;
 	background-color: black;
 	position: fixed;
+	margin-top: -24px;
 }
 
 #logodbc {
@@ -119,10 +120,13 @@ form {
 }
 
 .question_index {
-	padding: 10px;
 	width:70%;
 	margin: 0px auto;
 	border-bottom: dotted black 1px;
+}
+
+.question_index h1 {
+	padding-top: 10%;
 }
 
 .question_index a {
@@ -132,10 +136,6 @@ form {
 
 .q_title {
 	font-size: 30px;
-}
-
-.question_div{
-	border-bottom: dotted black 1px;
 }
 
 #new_question{
