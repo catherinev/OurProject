@@ -48,6 +48,7 @@ $(document).ready( function(){
       $('.commentform').hide();
       $('.addComment').show();
       $('.comments').prepend(response);
+      $('.noquestioncomments').hide();
      
 
     }).fail(function(response) {
