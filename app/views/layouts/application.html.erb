@@ -14,6 +14,7 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
   <title>DBCoverflow</title>
   <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -21,35 +22,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
 	<header>
-      
 		<nav>
-				<ul>
-					<li id="logodbc"><a href='/'><div class="dbcoverflow"></div></a></li>
-					<li id="search_form">
-						<%= form_tag searches_path,id:"search_form_box", :method => 'get' do %>
-  					<%= text_field_tag :q, params[:q] %>
-  					<%= submit_tag :search %>
-						<% end %>
-					</li>
-					<%if current_user %>
-						<li class="nav_link"><%= link_to "Add Question", new_question_path %></li>
-						<li class="nav_link"><%= link_to "Profile", user_path(current_user) %></li>
-						<li class="nav_link"><%= link_to "Logout", session_path(current_user), data: { confirm: "Are you sure?" }, method: "delete" %></li>
-					<%else%>
-						<li class="nav_link"><%= link_to "Login", new_session_path %></li>
-						<li class="nav_link"><%= link_to "Create Account", new_user_path %></li>
-					<%end%>
-					<li class="nav_link"><%= link_to "Home", questions_path %></li>
-					<li class="nav_link"><%= link_to "Browse", categories_path %></li>
-				</ul>
+			<span id="logodbc"><a href='/'><div class="dbcoverflow"></div></a></span>
+
+
+			<ul class="nav_links">
+
+				<%if current_user %>
+					<li><%= link_to "Logout", session_path(current_user), data: { confirm: "Are you sure?" }, method: "delete" %></li>
+					<li><%= link_to "Profile", user_path(current_user) %></li>
+					<li><%= link_to "Add Question", new_question_path %></li>
+				<%else%>
+					<li><%= link_to "Login", new_session_path %></li>
+					<li><%= link_to "Create Account", new_user_path %></li>
+				<%end%>
+
+				<li><%= link_to "Browse", categories_path %></li>
+				<li><%= link_to "Home", questions_path %></li>
+
+
+				<li id="search_form">
+					<%= form_tag searches_path, id:"search_form_box", :method => 'get' do %>
+						<%= text_field_tag :q, params[:q] %>
+						<%= submit_tag :search %>
+					<% end %>
+				</li>
+			</ul>
 		</nav>
-
-
-
-
-
 	</header>
 
 	<%= yield %>
