@@ -35,10 +35,10 @@
 					<%if current_user %>
 						<li class="nav_link"><%= link_to "Add Question", new_question_path %></li>
 						<li class="nav_link"><%= link_to "Profile", user_path(current_user) %></li>
-						<li class="nav_link"><%= link_to "Logout", session_path(current_user), data: { confirm: "Are you sure?" }, method: "delete" %></li>
+						<li class="nav_link"><%= link_to "Logout", destroy_user_session_url, data: { confirm: "Are you sure?" }, method: "delete" %></li>
 					<%else%>
-						<li class="nav_link"><%= link_to "Login", new_session_path %></li>
-						<li class="nav_link"><%= link_to "Create Account", new_user_path %></li>
+						<li class="nav_link"><%= link_to "Login", new_user_session_url %></li>
+						<li class="nav_link"><%= link_to "Create Account", new_user_registration_url %></li>
 					<%end%>
 					<li class="nav_link"><%= link_to "Home", questions_path %></li>
 					<li class="nav_link"><%= link_to "Browse", categories_path %></li>

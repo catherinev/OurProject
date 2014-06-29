@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
-
-  
-
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :searches, only: [:index]
   resources :users, except: [:destroy, :index]
   resources :questions do

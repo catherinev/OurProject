@@ -45,6 +45,8 @@ group :development, :test do
 end
 
 gem 'simplecov', :require => false, :group => :test
+gem 'devise'
+gem "omniauth-google-oauth2"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
