@@ -1,43 +1,41 @@
-#error_message {
-	color: red;
-
-}
- #map_canvas {
-        margin: auto;
-        width: 500px;
-        height: 400px;
-      }
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
- .gravatar{
- 	width:30%;
- 	height:30%;
- 	border: dotted black 1px;
- }
-
 body{
 	margin:0px;
 	background-image: url('/assets/logo2.jpg');
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center; 
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
-.dbcoverflow{
+ul {
+	list-style: none;
+}
+
+li {
+	text-decoration: none;
+}
+
+li a {
+	text-decoration:none;
+	color: black;
+}
+
+
+/* --------------NAV-------------*/
+nav {
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	position: fixed;
+	margin-top: -24px;
+}
+
+#logodbc {
+	float:left;
+	margin-top: 10px;
+}
+
+.dbcoverflow {
 	background:url('/assets/dbcoverflow_logo.jpg');
 	width:400px;
 	height:68px;
@@ -45,94 +43,30 @@ body{
 
 nav li {
 	display: inline-block;
-	margin-top: 60px;
+	margin: 32px 8px;
 	float:right;
-	padding-right: 10px;
+	padding-right: 16px;
 }
 
-#logodbc{
-	float:left;
-	margin-top: 10px;
-
-}
-#search_form{
-	border:none;
-	margin-top: 43px;
-
+.nav_links a {
+	color: #F0F0F0;
 }
 
-nav ul{
-	padding-right: 13px;
-}
-
-nav{
-	width: 100%;
-	height: 80px;
-	background-color: black;
-}
-
-
-li {
-	text-decoration: none;
-}
-
-body li{
-	text-decoration:none;
-}
-
-body li a{
-	text-decoration:none;
-	color: black;
-}
-
-ul{
-	list-style: none;
-}
-
-.nav_link a{
-	color: white;
-}
-
-#new_user_form{
-	width:30%;
-	margin: 0px auto;
-}
-
-#new_user_form h2{
-	text-align: center;
-	font-size: 25px;
-	font-family: Georgia;
-}
 #search_form_box{
 	border:none;
 	width:180px;
+	display: inline;
 }
 
-form{
-	width: 70%;
-	border: dotted black 1px;
-	padding: 12px;
-	margin:auto;
+#search_form {
+	border:none;
+	float: right;
 }
 
-#category_listed{
-	width:50%;
-	margin: 0px auto;
-}
 
-.question_index{
-	padding: 10px;
-	width:70%;
-	margin: 0px auto;
-	border-bottom: dotted black 1px;
-}
-.question_index a{
-	text-decoration: none;
-	color:black;
-}
-
-.q_title{
-	font-size: 30px;
+/*---------------USERS AND SESSIONS---------*/
+#error_message {
+	color: red;
 }
 
 #signin_form{
@@ -144,25 +78,24 @@ form{
 	text-align: center;
 }
 
-#question_show_page_container{
-	width: 650px;
-	margin: auto;
+#new_user_form {
+	width:30%;
+	margin: 0px auto;
 }
 
-.comments_each{
-	background-color: lightgrey;
-	padding: 5px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border-radius: 0.75em;
+#new_user_form h2 {
+	text-align: center;
+	font-size: 25px;
+	font-family: Georgia;
 }
 
-.question_div{
-	border-bottom: dotted black 1px;
-}
+/*---------------GROUP: ANSWERS, QUESTIONS, USERS-------------*/
 
-.answer_div{
-	padding:15px;
+form {
+	width: 70%;
+	border: dotted black 1px;
+	padding: 12px;
+	margin:auto;
 }
 
 .posted_by{
@@ -171,11 +104,30 @@ form{
 	font-style: italic;
 }
 
+/*---------------QUESTIONS---------*/
 
-#answer_form{
-	border: dotted lightgrey 1px;
-	padding: 12px;
-	border-radius: .75em;
+#question_show_page_container {
+	width: 650px;
+	margin: auto;
+}
+
+.question_index {
+	width:70%;
+	margin: 0px auto;
+	border-bottom: dotted black 1px;
+}
+
+.question_index h1 {
+	padding-top: 10%;
+}
+
+.question_index a {
+	text-decoration: none;
+	color:black;
+}
+
+.q_title {
+	font-size: 30px;
 }
 
 #new_question{
@@ -194,11 +146,52 @@ form{
 	margin:20px auto;
 }
 
+
 .header_for_edit_form{
 	text-align: center;
 }
 
-#profile{
+/*-------------ANSWERS---------------------*/
+
+
+.answer_div{
+	padding:15px;
+}
+
+#answer_form{
+	border: dotted lightgrey 1px;
+	padding: 12px;
+	border-radius: .75em;
+}
+
+
+
+
+/*-------------COMMENTS----------------------*/
+.comments_each{
+	background-color: lightgrey;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 0.75em;
+}
+
+/*---------------CATEGORIES-------------*/
+#category_listed {
+	width:50%;
+	margin: 0px auto;
+}
+
+
+
+/* -----------PROFILE--------------*/
+.gravatar {
+ 	width:30%;
+ 	height:30%;
+ 	border: dotted black 1px;
+ }
+
+#profile {
 	margin: 30px auto;
 	width: 500px;
 	border: dotted grey 1px;
@@ -208,17 +201,16 @@ form{
 	box-shadow: inset 0 0 100px #000;
 }
 
-#edit_form_for_profile{
+#edit_form_for_profile {
 	width:30%;
 	margin:10px auto;
-
 }
 
-#edit_profile_header{
+#edit_profile_header {
 	margin:10 auto;
 	width:200px;
-
 }
+
 .edit_button_profile {
 	-moz-box-shadow:inset -3px 17px 20px -4px #bee2f9;
 	-webkit-box-shadow:inset -3px 17px 20px -4px #bee2f9;
@@ -253,29 +245,31 @@ form{
 	text-decoration:none;
 	text-align:center;
 	text-shadow:-1px 0px 0px #7cacde;
-
 }
+
 .edit_button_profile:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
 	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee');
 	background-color:#468ccf;
+}
 
-
-}.edit_button_profile:active {
+.edit_button_profile:active {
 	position:relative;
 	top:1px;
 }
 
-#edit_profile{
+#edit_profile {
 	text-decoration: none;
 	color:black;
 }
-#edit_profile:hover{
-color:white;
-text-transform: lowercase;
+
+#edit_profile:hover {
+	color:white;
+	text-transform: lowercase;
 }
 
+/*=====================================*/
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
@@ -340,71 +334,95 @@ and (min-width : 1824px) {
 }
 
 /* iPhone 4 ----------- */
-@media (max-width: 640px)
+@media (max-width: 480px) {
 
- {
+/*	html, body {
+		color: red;
+	}*/
 
-	html, body{
-		width: 100%;
-		height:100%;
-
-
+	nav {
+		position: relative;
 	}
 
-	nav{
-		width:100%;
-
+	.dbcoverflow {
+		background-size: 240px 60px;
+		background-repeat: no-repeat;
 	}
 
 	nav li {
-	display: inline-block;
-	/*margin-top: 60px;*/
-	float:right;
-	/*padding-right: 10px;*/
-}
+		/*display: block;*/
+		margin: 32px 8px;
+		float: left;
+		padding-right: 14px;
+		font-size: .8em;
+	}
 
-nav ul{
-	/*padding-right: 13px;*/
-}
+	.nav_links a {
+		color: red;
+		margin-left: -20px;
+		/*display: block;*/
+	}
 
-.dbcoverflow{
-	float:left;
-	/*margin-left: 1.0em;*/
-	text-decoration: none;
-	/*margin-top: 0.65em;*/
-	font-size: .075em;
-	font-family: Arial;
-}
+	#search_form_box{
+		border:none;
+		width:180px;
+		display: none;
+	}
 
-nav li {
-	display: inline-block;
-	/*margin-top: 60px;*/
-	float:right;
-	/*padding-right: 0px;*/
-}
+	#search_form {
+		border:none;
+		float: right;
+	}
 
-nav ul{
-	/*padding-right: 13px;*/
-}
+	.question_index {
+		width:100%;
+		margin: 0px 0px 0px -20px;
+		border-bottom: dotted black 1px;
+		font-size: 0.9em;
+	}
 
-.question_index{
-	padding: 05%;
-	/*padding-right: 2em;*/
-	width:90%;
-	margin: auto;
-	border-bottom: dotted black 1px;
-}
-/*.question_index a{
-	text-decoration: none;
-	color:black;
-}*/
+	.question_index h1 {
+		padding-top: 10%;
+		margin-left: 30px;
+		font-size: 1.2em;
+	}
 
-#new_user_form{
-	width:100%;
-	margin: 0px auto;
-}
+	.question_index a {
+		text-decoration: none;
+		color:black;
+		font-size: 0.9em;
+	}
 
-/* Styles */
+	.q_title {
+		font-size: 20px;
+	}
+
+	#question_show_page_container {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#new_question{
+
+		margin: 20px auto;
+		width: 50%px;
+	}
+
+	.new_question{
+		
+		margin: 30px auto;
+		width: 40%;
+	}
+
+	#edit_question_form{
+		margin:20px auto;
+	}
+
+
+	.header_for_edit_form{
+		text-align: center;
+	}
 }
 
 
