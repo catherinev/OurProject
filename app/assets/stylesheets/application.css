@@ -397,6 +397,12 @@ and (min-width : 1824px) {
 		font-size: 20px;
 	}
 
+	#question_show_page_container {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 	#new_question{
 
 		margin: 20px auto;
