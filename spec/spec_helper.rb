@@ -19,10 +19,13 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
   config.include Capybara::DSL
+  config.include Warden::Test::Helpers
+  
 
   config.mock_with :rspec
 
   config.before(:suite) do
+    Warden.test_mode!
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
   end
