@@ -43,9 +43,8 @@ feature 'User browsing the website'  do
 
   context 'on showpage not logged in' do
     before do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      @question = Question.create(title: "BlahBlah", content: "More Blah", user_id: @user.id, category_id: 1)
-      @question.answers << Answer.create(content: "You should do this...", user_id: @user.id)
+      @question = FactoryGirl.create(:question)
+      @answer = FactoryGirl.create(:answer)
       visit question_url(@question)
     end
 

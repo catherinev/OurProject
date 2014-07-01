@@ -1,14 +1,11 @@
 require 'spec_helper'
 
-include Warden::Test::Helpers
-Warden.test_mode!
-
 feature 'User browsing the website'  do
   context 'on homepage' do
     it "sees a list of recent posts titles" do
-      question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
+      question = FactoryGirl.create(:question)
       visit root_url
-      expect(page).to have_content("BlahBlah")
+      expect(page).to have_content("new question")
     end
 
     it "when logged in should show user features" do
