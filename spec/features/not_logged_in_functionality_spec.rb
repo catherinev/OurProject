@@ -49,15 +49,15 @@ feature 'User browsing the website'  do
     end
 
     it 'should display title of the question' do
-      expect(page).to have_content("BlahBlah")
+      expect(page).to have_content("new question")
     end
 
     it 'should display content of the question' do
-      expect(page).to have_content("More Blah")
+      expect(page).to have_content("i have a great question")
     end
 
     it 'should show all answers to a question' do
-      expect(page).to have_content(@question.answers[0].content)
+      expect(page).to have_content('i have the perfect solution')
     end
 
     it 'should not have the Add Answer button' do
