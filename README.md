@@ -12,9 +12,9 @@ Check out [DBCoverflow](http://dbc-overflow-ckmr.herokuapp.com/)! Check out some
 
 ## Dependencies
 
-DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com/login). 
+DBCoverflow is a stand-alone app deployed through [Heroku](https://id.heroku.com/login).
 
-To get it running on a local host, create and migrate and seed regularily. 
+To get it running on a local host, create and migrate and seed regularily.
 
 ## Testing
 
@@ -58,7 +58,7 @@ DBCoverflow is created and managed by Catherine, Kim, Monica, and Rick. To reach
 
 This code is free to use under the terms of the MIT license.
 
-
+<!-- Missing elastic search setup instructions and that I need to seed the db for categories -->
 
 
 
