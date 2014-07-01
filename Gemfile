@@ -42,6 +42,7 @@ group :development, :test do
 	gem 'database_cleaner', '~>1.2.0'
   gem 'shoulda-matchers', require: false
   gem 'rack_session_access'
+  gem 'factory_girl_rails'
 end
 
 gem 'simplecov', :require => false, :group => :test

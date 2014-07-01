@@ -1,5 +1,8 @@
 require 'spec_helper'
 
+include Warden::Test::Helpers
+Warden.test_mode!
+
 feature 'User browsing the website'  do
   context 'on homepage' do
     it "sees a list of recent posts titles" do
@@ -9,8 +12,8 @@ feature 'User browsing the website'  do
     end
 
     it "when logged in should show user features" do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      page.set_rack_session(:user_id => @user.id)
+      user = FactoryGirl.create(:user)
+      login_as(user)
       visit root_url
       expect(page).to have_content("Logout")
       expect(page).to have_content("Add Question")
@@ -32,15 +35,15 @@ feature 'User browsing the website'  do
     end
 
      it 'should redirect to add question when click add question' do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      page.set_rack_session(:user_id => @user.id)
+      user = FactoryGirl.create(:user)
+      login_as(user)
       visit root_url
       click_link("Add Question")
       expect(current_url).to eq new_question_url
     end
     it 'should be logged out and redirected to homepage on click of logout' do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      page.set_rack_session(:user_id => @user.id)
+      user = FactoryGirl.create(:user)
+      login_as(user)
       visit root_url
       click_link("Logout")
       expect(current_url).to eq questions_url
@@ -50,8 +53,8 @@ feature 'User browsing the website'  do
 
   context 'on showpage and logged in' do
     before do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      page.set_rack_session(:user_id => @user.id)
+      @user = FactoryGirl.create(:user)
+      login_as(@user)
       @question = Question.create(title: "BlahBlah", content: "More Blah", user_id: @user.id, category_id: 1)
       @question.answers << Answer.create(content: "You should do this...", user_id: @user.id)
       visit question_url(@question)
@@ -69,8 +72,8 @@ feature 'User can answer a question' do
     it 'should show answers content on the current question page' do
 
       question = Question.create(title: "BlahBlah", content: "More Blah", user_id: 1, category_id: 1)
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      page.set_rack_session(:user_id => @user.id)
+      user = FactoryGirl.create(:user)
+      login_as(user)
       visit question_path(question.id)
       within('.answerform') do
         fill_in 'Content', with: "this is my content"
@@ -85,10 +88,9 @@ feature 'User can edit their question' do
   context 'on question page' do
 
     it 'should change the content of the question after editing.' do
-      @user = User.create(username: "pickles", email: "Ihatepicklesthefood@gmail.com", password: "notcake", password_confirmation: "notcake")
-      question = Question.create(title: "BlahBlah", content: "Main question", user_id: @user.id, category_id: 1)
-     
-      page.set_rack_session(:user_id => @user.id)
+      user = FactoryGirl.create(:user)
+      login_as(user)
+      question = Question.create(title: "BlahBlah", content: "Main question", user_id: user.id, category_id: 1)      
       visit question_path(question.id)
 
       within('#edit_link_for_question') do
