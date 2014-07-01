@@ -1,18 +1,14 @@
 class CommentsController < ApplicationController
   def create
+    # determine parent
     if params[:question_id]
-      @comment = Comment.new(comment_params)
-      @comment.user = current_user
-      @question = Question.find(params[:question_id])
-      @question.comments << @comment
-      render partial: 'comment', locals: {comment: @comment}, layout: false
+      parent = Question.find(params[:question_id])
     else
-      @comment = Comment.new(comment_params)
-      @comment.user = current_user
-      @answer = Answer.find(params[:answer_id])
-      @answer.comments << @comment
-      render partial: 'comment', locals: {comment: @comment}, layout: false
+      parent = Answer.find(params[:answer_id])
     end
+    # build the comment object
+    comment = Comment.new(comment_params.merge(user: current_user, parent: parent))
+    render partial: 'comment', locals: {comment: comment}, layout: false
   end
 
   private
