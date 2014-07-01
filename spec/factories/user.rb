@@ -24,7 +24,6 @@ end
 
 FactoryGirl.define do
   factory :answer do
-    title 'new answer'
     content 'i have the perfect solution'
     association :question, factory: :question
     association :user, factory: :user
