@@ -404,34 +404,41 @@
         null,
         null
       ],
+      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/factories/answer.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/factories/question.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/mickey/Documents/DBC/phase_3/week_1/OurProject/spec/factories/user.rb": [
         1,
         null,
         1,
         1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
+        12,
         1,
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -1203,6 +1210,6 @@
         null
       ]
     },
-    "timestamp": 1404183192
+    "timestamp": 1404184260
   }
 }
